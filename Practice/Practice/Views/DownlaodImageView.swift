@@ -77,6 +77,7 @@ struct DownlaodImageView: View {
             }
             )
             .disposed(by: self.disposeBag)
+            self.disposeBag = DisposeBag()
         })
         {
             Text("Async")

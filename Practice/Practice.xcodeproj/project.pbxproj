@@ -20,6 +20,7 @@
 		F352B49D23D43953007C4B37 /* PracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F352B49C23D43953007C4B37 /* PracticeUITests.swift */; };
 		F352B4AC23D43BD4007C4B37 /* DownlaodImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F352B4AB23D43BD4007C4B37 /* DownlaodImageView.swift */; };
 		F352B4AF23D46FBB007C4B37 /* FundermentalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F352B4AE23D46FBB007C4B37 /* FundermentalView.swift */; };
+		F352B4B123D48ADE007C4B37 /* Fundermental2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F352B4B023D48ADE007C4B37 /* Fundermental2View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		F352B49E23D43953007C4B37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F352B4AB23D43BD4007C4B37 /* DownlaodImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownlaodImageView.swift; sourceTree = "<group>"; };
 		F352B4AE23D46FBB007C4B37 /* FundermentalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundermentalView.swift; sourceTree = "<group>"; };
+		F352B4B023D48ADE007C4B37 /* Fundermental2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fundermental2View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 			children = (
 				F352B4AB23D43BD4007C4B37 /* DownlaodImageView.swift */,
 				F352B4AE23D46FBB007C4B37 /* FundermentalView.swift */,
+				F352B4B023D48ADE007C4B37 /* Fundermental2View.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 			files = (
 				F352B4AC23D43BD4007C4B37 /* DownlaodImageView.swift in Sources */,
 				F352B47B23D4394E007C4B37 /* AppDelegate.swift in Sources */,
+				F352B4B123D48ADE007C4B37 /* Fundermental2View.swift in Sources */,
 				F352B47D23D4394E007C4B37 /* SceneDelegate.swift in Sources */,
 				F352B4AF23D46FBB007C4B37 /* FundermentalView.swift in Sources */,
 				F352B47F23D4394E007C4B37 /* ContentView.swift in Sources */,

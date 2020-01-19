@@ -9,7 +9,7 @@
 import SwiftUI
 import RxSwift
 
-// Definition
+// Definitions
 
 let one = 1
 let two = 2
@@ -106,9 +106,28 @@ func obsDispose(){
             onNext: {print("12: \($0)")},
             onError: {print("12: \($0)")},
             onCompleted: {print("observable12 was done!")},
-            onDisposed: {print("Disposed")}
+            onDisposed: {print("observable12 was disposed!")}
     )
         .disposed(by: disposeBag)
+}
+
+func obsError(){
+    enum MyError: Error{
+        case anError
+    }
+    let observable13 = Observable<String>.create {
+        $0.onNext("1")
+        $0.onError(MyError.anError)
+        $0.onCompleted()
+        return Disposables.create()
+    }
+    observable13
+        .subscribe(
+            onNext: {print("13: \($0)")},
+            onError: {print("13: \($0)")},
+            onCompleted: {print("obervable13 was done!")},
+            onDisposed: {print("observable13 was disposed!")}
+    )
 }
 
 // End
@@ -119,6 +138,7 @@ struct FundermentalView: View {
     var tipAlert: Alert {
         Alert(title: Text("Tip!"), message: Text("""
             1. obsFrom gives Event<Int>, but obsComplete gives Int because obsComplete uses onNext: {}.
+            2. After onError, onCompleted is ignored.
         """), dismissButton: .default(Text("Dismiss")))
     }
     
@@ -139,6 +159,7 @@ struct FundermentalView: View {
             Button(action: {obsNever()}){ Text("obsNever()").foregroundColor(Color.blue)}
             Button(action: {obsRange()}){ Text("obsRange()").foregroundColor(Color.blue)}
             Button(action: {obsDispose()}){ Text("obsDispose()").foregroundColor(Color.blue)}
+            Button(action: {obsError()}){ Text("obsError()").foregroundColor(Color.blue)}
             //Button(action: {()}){ Text("()").foregroundColor(Color.blue)}
         }
         .alert(isPresented: $showAlert, content: {tipAlert})
