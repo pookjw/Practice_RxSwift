@@ -115,6 +115,7 @@ struct DownlaodImageView: View {
             
         }
         .navigationBarItems(trailing: navBarButton)
+        .navigationBarTitle("", displayMode: .inline)
         .onAppear {
             Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
                 self.counter += 1
