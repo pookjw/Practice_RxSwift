@@ -21,6 +21,9 @@ struct ContentView: View {
                 NavigationLink(destination: Fundermental2View()){
                     Text("Fundermental2View")
                 }
+                NavigationLink(destination: SubjectsView()){
+                    Text("SubjectsView")
+                }
             }
         .navigationBarTitle("Practice")
         }

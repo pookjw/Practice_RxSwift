@@ -21,6 +21,8 @@
 		F352B4AC23D43BD4007C4B37 /* DownlaodImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F352B4AB23D43BD4007C4B37 /* DownlaodImageView.swift */; };
 		F352B4AF23D46FBB007C4B37 /* FundermentalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F352B4AE23D46FBB007C4B37 /* FundermentalView.swift */; };
 		F352B4B123D48ADE007C4B37 /* Fundermental2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F352B4B023D48ADE007C4B37 /* Fundermental2View.swift */; };
+		F352B4B323D536A2007C4B37 /* Copyright.txt in Resources */ = {isa = PBXBuildFile; fileRef = F352B4B223D536A2007C4B37 /* Copyright.txt */; };
+		F352B4B523D53F00007C4B37 /* SubjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F352B4B423D53F00007C4B37 /* SubjectsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		F352B4AB23D43BD4007C4B37 /* DownlaodImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownlaodImageView.swift; sourceTree = "<group>"; };
 		F352B4AE23D46FBB007C4B37 /* FundermentalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundermentalView.swift; sourceTree = "<group>"; };
 		F352B4B023D48ADE007C4B37 /* Fundermental2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fundermental2View.swift; sourceTree = "<group>"; };
+		F352B4B223D536A2007C4B37 /* Copyright.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Copyright.txt; sourceTree = "<group>"; };
+		F352B4B423D53F00007C4B37 /* SubjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,7 @@
 				F352B48523D43952007C4B37 /* LaunchScreen.storyboard */,
 				F352B48823D43952007C4B37 /* Info.plist */,
 				F352B48223D43952007C4B37 /* Preview Content */,
+				F352B4B223D536A2007C4B37 /* Copyright.txt */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 				F352B4AB23D43BD4007C4B37 /* DownlaodImageView.swift */,
 				F352B4AE23D46FBB007C4B37 /* FundermentalView.swift */,
 				F352B4B023D48ADE007C4B37 /* Fundermental2View.swift */,
+				F352B4B423D53F00007C4B37 /* SubjectsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -300,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F352B4B323D536A2007C4B37 /* Copyright.txt in Resources */,
 				F352B48723D43952007C4B37 /* LaunchScreen.storyboard in Resources */,
 				F352B48423D43952007C4B37 /* Preview Assets.xcassets in Resources */,
 				F352B48123D43952007C4B37 /* Assets.xcassets in Resources */,
@@ -396,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F352B4B523D53F00007C4B37 /* SubjectsView.swift in Sources */,
 				F352B4AC23D43BD4007C4B37 /* DownlaodImageView.swift in Sources */,
 				F352B47B23D4394E007C4B37 /* AppDelegate.swift in Sources */,
 				F352B4B123D48ADE007C4B37 /* Fundermental2View.swift in Sources */,
