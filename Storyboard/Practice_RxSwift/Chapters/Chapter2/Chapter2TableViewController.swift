@@ -75,8 +75,8 @@ class Chapter2TableViewController: UITableViewController {
             cell.actionButton.setTitle("Single", for: .normal)
             cell.actionButton.addTarget(self, action: #selector(self.action12(_:)), for: .touchUpInside)
         case 12:
-        cell.actionButton.setTitle("[Challenge 1] do ", for: .normal)
-        cell.actionButton.addTarget(self, action: #selector(self.action13(_:)), for: .touchUpInside)
+            cell.actionButton.setTitle("[Challenge 1] do ", for: .normal)
+            cell.actionButton.addTarget(self, action: #selector(self.action13(_:)), for: .touchUpInside)
         default:
             ()
         }
