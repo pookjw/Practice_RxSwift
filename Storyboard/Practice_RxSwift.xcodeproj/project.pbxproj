@@ -29,6 +29,8 @@
 		F3FB810624364D53007457CD /* Chapter4PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FB810524364D53007457CD /* Chapter4PhotosCollectionViewController.swift */; };
 		F3FB810824364E27007457CD /* Chapter4PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FB810724364E27007457CD /* Chapter4PhotosCollectionViewCell.swift */; };
 		F3FB810A2436659B007457CD /* Chapter4PhotoWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FB81092436659B007457CD /* Chapter4PhotoWriter.swift */; };
+		F3FC498D2436935C002BCE5F /* Chapter5TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FC498C2436935C002BCE5F /* Chapter5TableViewController.swift */; };
+		F3FC498F2436936E002BCE5F /* Chapter5TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FC498E2436936E002BCE5F /* Chapter5TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		F3FB810524364D53007457CD /* Chapter4PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter4PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		F3FB810724364E27007457CD /* Chapter4PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter4PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		F3FB81092436659B007457CD /* Chapter4PhotoWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter4PhotoWriter.swift; sourceTree = "<group>"; };
+		F3FC498C2436935C002BCE5F /* Chapter5TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter5TableViewController.swift; sourceTree = "<group>"; };
+		F3FC498E2436936E002BCE5F /* Chapter5TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter5TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +209,7 @@
 		F35BC13C24324538009788D6 /* Chapters */ = {
 			isa = PBXGroup;
 			children = (
+				F3FC498B24369319002BCE5F /* Chapter 5 */,
 				F3FB80EA243544A3007457CD /* Chapter 4 */,
 				F3FB80E52435367C007457CD /* Chapter 3 */,
 				F35BC13D24324541009788D6 /* Chapter2 */,
@@ -255,6 +260,15 @@
 				F3FB8101243632C3007457CD /* UIImage.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F3FC498B24369319002BCE5F /* Chapter 5 */ = {
+			isa = PBXGroup;
+			children = (
+				F3FC498C2436935C002BCE5F /* Chapter5TableViewController.swift */,
+				F3FC498E2436936E002BCE5F /* Chapter5TableViewCell.swift */,
+			);
+			path = "Chapter 5";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -498,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3FB810824364E27007457CD /* Chapter4PhotosCollectionViewCell.swift in Sources */,
+				F3FC498D2436935C002BCE5F /* Chapter5TableViewController.swift in Sources */,
 				F35BC13B2432436F009788D6 /* MainTableViewController.swift in Sources */,
 				F3FB8102243632C3007457CD /* UIImage.swift in Sources */,
 				F3FB810A2436659B007457CD /* Chapter4PhotoWriter.swift in Sources */,
@@ -509,6 +524,7 @@
 				F3FB80EC243544B9007457CD /* Chapter4ViewController.swift in Sources */,
 				F35BC14124324561009788D6 /* Chapter2TableViewCell.swift in Sources */,
 				F35BC13924324362009788D6 /* MainTableViewCell.swift in Sources */,
+				F3FC498F2436936E002BCE5F /* Chapter5TableViewCell.swift in Sources */,
 				F35BC10A243242FC009788D6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

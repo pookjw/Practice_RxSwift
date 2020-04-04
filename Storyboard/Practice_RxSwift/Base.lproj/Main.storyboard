@@ -18,14 +18,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainTableViewCell" id="6Ii-0Z-DQv" customClass="MainTableViewCell" customModule="Practice_RxSwift" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="63"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="63.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Ii-0Z-DQv" id="ALv-u5-5Ej">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="63"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="63.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crf-Tw-T3E">
-                                            <rect key="frame" x="30" y="21" width="354" height="21"/>
+                                            <rect key="frame" x="30" y="21" width="354" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -53,6 +53,7 @@
                         <segue destination="dW5-wn-0Kv" kind="show" identifier="ShowChapter2" id="CAJ-l0-D8H"/>
                         <segue destination="Ldc-aZ-GQb" kind="show" identifier="ShowChapter3" id="PiY-Bc-qk1"/>
                         <segue destination="hyI-Ri-VQZ" kind="show" identifier="ShowChapter4" id="7ku-DD-E2R"/>
+                        <segue destination="CBv-UM-hxw" kind="show" identifier="ShowChapter5" id="4VR-0f-XBS"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rya-4v-UvH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -233,7 +234,51 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o5K-3l-xFB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1564" y="2055"/>
+            <point key="canvasLocation" x="1564" y="2092"/>
+        </scene>
+        <!--Chapter 5-->
+        <scene sceneID="PxW-QW-gGO">
+            <objects>
+                <tableViewController id="CBv-UM-hxw" customClass="Chapter5TableViewController" customModule="Practice_RxSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="neW-5k-f5L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Chapter5TableViewCell" id="a6m-fZ-EaC" customClass="Chapter5TableViewCell" customModule="Practice_RxSwift" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="50.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a6m-fZ-EaC" id="2Q6-b5-wai">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HvG-EM-ZyG">
+                                            <rect key="frame" x="10" y="10" width="394" height="30.5"/>
+                                            <state key="normal" title="Button"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="HvG-EM-ZyG" firstAttribute="top" secondItem="2Q6-b5-wai" secondAttribute="top" constant="10" id="0SO-nn-W94"/>
+                                        <constraint firstAttribute="trailing" secondItem="HvG-EM-ZyG" secondAttribute="trailing" constant="10" id="EZZ-XL-LKW"/>
+                                        <constraint firstItem="HvG-EM-ZyG" firstAttribute="leading" secondItem="2Q6-b5-wai" secondAttribute="leading" constant="10" id="ajP-8h-axj"/>
+                                        <constraint firstAttribute="bottom" secondItem="HvG-EM-ZyG" secondAttribute="bottom" constant="10" id="cHe-0m-RhU"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="actionButton" destination="HvG-EM-ZyG" id="Jo5-nX-nm0"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CBv-UM-hxw" id="r4h-oa-kOv"/>
+                            <outlet property="delegate" destination="CBv-UM-hxw" id="8Yy-so-c0d"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Chapter 5" id="bP6-hm-Rfn"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WeZ-7f-rJY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1564" y="2825"/>
         </scene>
         <!--Chapter4 Photos Collection View Controller-->
         <scene sceneID="bhq-18-Ww2">
@@ -290,7 +335,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bro-AU-e8t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2528" y="2054"/>
+            <point key="canvasLocation" x="2528" y="2092"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hjq-Is-uuW">
