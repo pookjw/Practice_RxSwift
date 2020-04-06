@@ -16,6 +16,8 @@
 		F3533FCD243A87AF00D0ABA3 /* Chapter6PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3533FC9243A87AF00D0ABA3 /* Chapter6PhotosCollectionViewController.swift */; };
 		F3533FCF243A915F00D0ABA3 /* PHPhotoLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3533FCE243A915F00D0ABA3 /* PHPhotoLibrary.swift */; };
 		F3533FD1243ACD2100D0ABA3 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3533FD0243ACD2100D0ABA3 /* UIViewController.swift */; };
+		F3533FD4243AD02200D0ABA3 /* Chapter7TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3533FD3243AD02100D0ABA3 /* Chapter7TableViewController.swift */; };
+		F3533FD6243AD03100D0ABA3 /* Chapter7TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3533FD5243AD03100D0ABA3 /* Chapter7TableViewCell.swift */; };
 		F35BC108243242FC009788D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35BC107243242FC009788D6 /* AppDelegate.swift */; };
 		F35BC10A243242FC009788D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35BC109243242FC009788D6 /* SceneDelegate.swift */; };
 		F35BC10F243242FC009788D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F35BC10D243242FC009788D6 /* Main.storyboard */; };
@@ -72,6 +74,8 @@
 		F3533FC9243A87AF00D0ABA3 /* Chapter6PhotosCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter6PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		F3533FCE243A915F00D0ABA3 /* PHPhotoLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPhotoLibrary.swift; sourceTree = "<group>"; };
 		F3533FD0243ACD2100D0ABA3 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		F3533FD3243AD02100D0ABA3 /* Chapter7TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter7TableViewController.swift; sourceTree = "<group>"; };
+		F3533FD5243AD03100D0ABA3 /* Chapter7TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter7TableViewCell.swift; sourceTree = "<group>"; };
 		F35BC104243242FC009788D6 /* Practice_RxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practice_RxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F35BC107243242FC009788D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F35BC109243242FC009788D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 		F3533FD2243ACF6C00D0ABA3 /* Chapter 7 */ = {
 			isa = PBXGroup;
 			children = (
+				F3533FD3243AD02100D0ABA3 /* Chapter7TableViewController.swift */,
+				F3533FD5243AD03100D0ABA3 /* Chapter7TableViewCell.swift */,
 			);
 			path = "Chapter 7";
 			sourceTree = "<group>";
@@ -550,6 +556,7 @@
 				F3533FCB243A87AF00D0ABA3 /* Chapter6ViewController.swift in Sources */,
 				F3533FCA243A87AF00D0ABA3 /* Chapter6PhotosCollectionViewCell.swift in Sources */,
 				F35BC13B2432436F009788D6 /* MainTableViewController.swift in Sources */,
+				F3533FD6243AD03100D0ABA3 /* Chapter7TableViewCell.swift in Sources */,
 				F3FB8102243632C3007457CD /* UIImage.swift in Sources */,
 				F3FB810A2436659B007457CD /* Chapter4PhotoWriter.swift in Sources */,
 				F35BC13F24324551009788D6 /* Chapter2TableViewController.swift in Sources */,
@@ -564,6 +571,7 @@
 				F35BC13924324362009788D6 /* MainTableViewCell.swift in Sources */,
 				F3FC498F2436936E002BCE5F /* Chapter5TableViewCell.swift in Sources */,
 				F3533FCC243A87AF00D0ABA3 /* Chapter6PhotoWriter.swift in Sources */,
+				F3533FD4243AD02200D0ABA3 /* Chapter7TableViewController.swift in Sources */,
 				F3533FCF243A915F00D0ABA3 /* PHPhotoLibrary.swift in Sources */,
 				F35BC10A243242FC009788D6 /* SceneDelegate.swift in Sources */,
 			);
