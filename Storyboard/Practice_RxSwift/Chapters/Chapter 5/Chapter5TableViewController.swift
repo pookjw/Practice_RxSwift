@@ -67,7 +67,7 @@ class Chapter5TableViewController: UITableViewController {
             cell.actionButton.setTitle("takeWhile", for: .normal)
             cell.actionButton.addTarget(self, action: #selector(self.action9(_:)), for: .touchUpInside)
         case 9:
-            cell.actionButton.setTitle("takeWhile", for: .normal)
+            cell.actionButton.setTitle("takeUntil", for: .normal)
             cell.actionButton.addTarget(self, action: #selector(self.action10(_:)), for: .touchUpInside)
         case 10:
             cell.actionButton.setTitle("distinctUntilChanged", for: .normal)
@@ -232,6 +232,23 @@ class Chapter5TableViewController: UITableViewController {
             .subscribe (
                 onNext: { print($0) }
         ).disposed(by: disposeBag)
+        
+        //
+        
+        let subject = PublishSubject<Int>()
+        var count = 0
+        subject
+            .takeWhile { _ in
+                count < 3
+        }.subscribe(
+            onNext: { print("subject: \($0)"); count += 1 },
+            onCompleted: { print("subject completed.") }
+        ).disposed(by: disposeBag)
+        
+        subject.onNext(1)
+        subject.onNext(2)
+        subject.onNext(3) // automatically completed
+        subject.onNext(4)
     }
     
     @objc private func action10(_ sender: UIButton) {
