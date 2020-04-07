@@ -111,7 +111,7 @@ class Chapter3TableViewController: UITableViewController {
         case anError
     }
     
-    private func print_le<T: CustomStringConvertible>(label: String, event: Event<T>) {
+    private func print_le<T: CustomStringConvertible>(label: String, event: RxSwift.Event<T>) {
         print("\(label))", (event.element ?? event.error) ?? event)
     }
     

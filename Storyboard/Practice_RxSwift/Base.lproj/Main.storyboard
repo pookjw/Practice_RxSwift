@@ -56,6 +56,7 @@
                         <segue destination="CBv-UM-hxw" kind="show" identifier="ShowChapter5" id="4VR-0f-XBS"/>
                         <segue destination="Ksz-GH-neZ" kind="show" identifier="ShowChapter6" id="JYR-kp-h9M"/>
                         <segue destination="7Kl-MK-rjm" kind="show" identifier="ShowChapter7" id="qf4-Si-ZUD"/>
+                        <segue destination="oT0-2E-sxc" kind="show" identifier="ShowChapter8" id="zta-yG-Sfc"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rya-4v-UvH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -556,6 +557,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9x-I9-8Rb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1564" y="4277"/>
+        </scene>
+        <!--Chapter 8-->
+        <scene sceneID="SDG-m3-Wol">
+            <objects>
+                <tableViewController id="oT0-2E-sxc" customClass="Chapter8TableViewController" customModule="Practice_RxSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hbb-5K-IAl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="cC3-fF-vnX" detailTextLabel="BMb-hk-3fq" style="IBUITableViewCellStyleSubtitle" id="kI8-ur-owE">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kI8-ur-owE" id="wZz-d1-vVB">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cC3-fF-vnX">
+                                            <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BMb-hk-3fq">
+                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oT0-2E-sxc" id="Mli-li-fxU"/>
+                            <outlet property="delegate" destination="oT0-2E-sxc" id="Fcg-Zb-N4c"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Chapter 8" id="mcg-y9-FiO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UJ8-Dz-Oly" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1564" y="4984"/>
         </scene>
     </scenes>
 </document>

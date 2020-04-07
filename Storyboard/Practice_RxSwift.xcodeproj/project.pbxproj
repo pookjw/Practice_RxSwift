@@ -10,6 +10,8 @@
 		52DB3B33A23D1B8A5BC506B5 /* Pods_Practice_RxSwift_Practice_RxSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14A30D9434C9326D8C8A625 /* Pods_Practice_RxSwift_Practice_RxSwiftUITests.framework */; };
 		78142B1CB877EC49656FBCCC /* Pods_Practice_RxSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33FEDAEC68BC1ABCF234000 /* Pods_Practice_RxSwiftTests.framework */; };
 		D10E2E9496EDF39E7761A438 /* Pods_Practice_RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6DEC663C41267949B53011 /* Pods_Practice_RxSwift.framework */; };
+		F30CECE0243BDFC300750820 /* Chapter8TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30CECDF243BDFC300750820 /* Chapter8TableViewController.swift */; };
+		F30CECE2243BDFEB00750820 /* Chapter8Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30CECE1243BDFEB00750820 /* Chapter8Event.swift */; };
 		F3533FCA243A87AF00D0ABA3 /* Chapter6PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3533FC6243A87AF00D0ABA3 /* Chapter6PhotosCollectionViewCell.swift */; };
 		F3533FCB243A87AF00D0ABA3 /* Chapter6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3533FC7243A87AF00D0ABA3 /* Chapter6ViewController.swift */; };
 		F3533FCC243A87AF00D0ABA3 /* Chapter6PhotoWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3533FC8243A87AF00D0ABA3 /* Chapter6PhotoWriter.swift */; };
@@ -68,6 +70,8 @@
 		AC617FAD19A6BE46FFA24404 /* Pods-Practice_RxSwift-Practice_RxSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Practice_RxSwift-Practice_RxSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-Practice_RxSwift-Practice_RxSwiftUITests/Pods-Practice_RxSwift-Practice_RxSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D5A04BC7382043E44B9B1191 /* Pods-Practice_RxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Practice_RxSwift.debug.xcconfig"; path = "Target Support Files/Pods-Practice_RxSwift/Pods-Practice_RxSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		E14A30D9434C9326D8C8A625 /* Pods_Practice_RxSwift_Practice_RxSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Practice_RxSwift_Practice_RxSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F30CECDF243BDFC300750820 /* Chapter8TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter8TableViewController.swift; sourceTree = "<group>"; };
+		F30CECE1243BDFEB00750820 /* Chapter8Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter8Event.swift; sourceTree = "<group>"; };
 		F3533FC6243A87AF00D0ABA3 /* Chapter6PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter6PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		F3533FC7243A87AF00D0ABA3 /* Chapter6ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter6ViewController.swift; sourceTree = "<group>"; };
 		F3533FC8243A87AF00D0ABA3 /* Chapter6PhotoWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter6PhotoWriter.swift; sourceTree = "<group>"; };
@@ -154,6 +158,15 @@
 				21625B09F99130513073CCAC /* Pods-Practice_RxSwiftTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F30CECDE243BDF5100750820 /* Chapter 8 */ = {
+			isa = PBXGroup;
+			children = (
+				F30CECDF243BDFC300750820 /* Chapter8TableViewController.swift */,
+				F30CECE1243BDFEB00750820 /* Chapter8Event.swift */,
+			);
+			path = "Chapter 8";
 			sourceTree = "<group>";
 		};
 		F3533FC1243A873F00D0ABA3 /* Chapter 6 */ = {
@@ -245,6 +258,7 @@
 		F35BC13C24324538009788D6 /* Chapters */ = {
 			isa = PBXGroup;
 			children = (
+				F30CECDE243BDF5100750820 /* Chapter 8 */,
 				F3533FD2243ACF6C00D0ABA3 /* Chapter 7 */,
 				F3533FC1243A873F00D0ABA3 /* Chapter 6 */,
 				F3FC498B24369319002BCE5F /* Chapter 5 */,
@@ -570,9 +584,11 @@
 				F35BC14124324561009788D6 /* Chapter2TableViewCell.swift in Sources */,
 				F35BC13924324362009788D6 /* MainTableViewCell.swift in Sources */,
 				F3FC498F2436936E002BCE5F /* Chapter5TableViewCell.swift in Sources */,
+				F30CECE2243BDFEB00750820 /* Chapter8Event.swift in Sources */,
 				F3533FCC243A87AF00D0ABA3 /* Chapter6PhotoWriter.swift in Sources */,
 				F3533FD4243AD02200D0ABA3 /* Chapter7TableViewController.swift in Sources */,
 				F3533FCF243A915F00D0ABA3 /* PHPhotoLibrary.swift in Sources */,
+				F30CECE0243BDFC300750820 /* Chapter8TableViewController.swift in Sources */,
 				F35BC10A243242FC009788D6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

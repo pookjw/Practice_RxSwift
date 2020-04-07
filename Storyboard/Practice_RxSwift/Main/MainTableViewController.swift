@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class MainTableViewController: UITableViewController {
 
@@ -29,20 +30,28 @@ class MainTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 6
+        return 8
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as! MainTableViewCell
 
         // Configure the cell...
-        cell.name.text = "Chapter \(indexPath.row + 2)"
+        cell.name.text = "Chapter \(indexPath.row + 1)"
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "ShowChapter\(indexPath.row + 2)", sender: self)
+        switch indexPath.row {
+        case 0:
+            let _ = alert(title: "Hello!", text: "Welcome to RxSwift!")
+                .asObservable()
+                .take(1.0, scheduler: MainScheduler.instance)
+                .subscribe()
+        default:
+            self.performSegue(withIdentifier: "ShowChapter\(indexPath.row + 1)", sender: self)
+        }
     }
 
     /*
