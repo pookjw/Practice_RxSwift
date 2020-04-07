@@ -2,4 +2,8 @@
 
 Practice of RxSwift with [RxSwift: Reactive Programming with Swift](https://store.raywenderlich.com/products/rxswift)
 
-![1](https://live.staticflickr.com/65535/49408284976_1f6f265e94_o.png)
+![1](images/1.png)
+
+![2](images/2.png)
+
+![3](images/3.png)
