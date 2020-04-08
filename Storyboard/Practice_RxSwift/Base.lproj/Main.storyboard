@@ -18,14 +18,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainTableViewCell" id="6Ii-0Z-DQv" customClass="MainTableViewCell" customModule="Practice_RxSwift" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="63.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="63"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Ii-0Z-DQv" id="ALv-u5-5Ej">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="63.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="63"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crf-Tw-T3E">
-                                            <rect key="frame" x="30" y="21" width="354" height="21.5"/>
+                                            <rect key="frame" x="30" y="21" width="354" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -57,6 +57,7 @@
                         <segue destination="Ksz-GH-neZ" kind="show" identifier="ShowChapter6" id="JYR-kp-h9M"/>
                         <segue destination="7Kl-MK-rjm" kind="show" identifier="ShowChapter7" id="qf4-Si-ZUD"/>
                         <segue destination="oT0-2E-sxc" kind="show" identifier="ShowChapter8" id="zta-yG-Sfc"/>
+                        <segue destination="m8r-TQ-dzM" kind="show" identifier="ShowChapter9" id="viW-Pu-ChZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rya-4v-UvH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -602,6 +603,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJ8-Dz-Oly" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1564" y="4984"/>
+        </scene>
+        <!--Chapter 9-->
+        <scene sceneID="eat-OY-90I">
+            <objects>
+                <tableViewController id="m8r-TQ-dzM" customClass="Chapter9TableViewController" customModule="Practice_RxSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="E2X-kM-Cil">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Chapter9TableViewCell" id="Hln-Lo-nEH" customClass="Chapter9TableViewCell" customModule="Practice_RxSwift" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="50.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hln-Lo-nEH" id="xcX-bU-IFk">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCp-Qg-jOe">
+                                            <rect key="frame" x="10" y="10" width="394" height="30.5"/>
+                                            <state key="normal" title="Button"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="eCp-Qg-jOe" firstAttribute="leading" secondItem="xcX-bU-IFk" secondAttribute="leading" constant="10" id="9E5-Il-WJe"/>
+                                        <constraint firstAttribute="trailing" secondItem="eCp-Qg-jOe" secondAttribute="trailing" constant="10" id="O4W-xW-ri1"/>
+                                        <constraint firstAttribute="bottom" secondItem="eCp-Qg-jOe" secondAttribute="bottom" constant="10" id="c3r-OX-hjB"/>
+                                        <constraint firstItem="eCp-Qg-jOe" firstAttribute="top" secondItem="xcX-bU-IFk" secondAttribute="top" constant="10" id="ftD-J7-HOB"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="actionButton" destination="eCp-Qg-jOe" id="Yt9-SJ-4yT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="m8r-TQ-dzM" id="35O-Tq-c8M"/>
+                            <outlet property="delegate" destination="m8r-TQ-dzM" id="apg-dB-u6h"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Chapter 9" id="qT6-Tf-dg8"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J9C-3E-ADy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1564" y="5711"/>
         </scene>
     </scenes>
 </document>
