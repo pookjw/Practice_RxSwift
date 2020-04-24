@@ -30,27 +30,27 @@ class MainTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 9
+        return 10
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as! MainTableViewCell
 
         // Configure the cell...
-        cell.name.text = "Chapter \(indexPath.row + 1)"
+        cell.name.text = "Chapter \(10 - indexPath.row)"
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
-        case 0:
+        case 9:
             let _ = alert(title: "Hello!", text: "Welcome to RxSwift!")
                 .asObservable()
                 .take(1.0, scheduler: MainScheduler.instance)
                 .subscribe()
         default:
-            self.performSegue(withIdentifier: "ShowChapter\(indexPath.row + 1)", sender: self)
+            self.performSegue(withIdentifier: "ShowChapter\(10 - indexPath.row)", sender: self)
         }
     }
 

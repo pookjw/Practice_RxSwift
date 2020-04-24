@@ -10,6 +10,13 @@
 		52DB3B33A23D1B8A5BC506B5 /* Pods_Practice_RxSwift_Practice_RxSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14A30D9434C9326D8C8A625 /* Pods_Practice_RxSwift_Practice_RxSwiftUITests.framework */; };
 		78142B1CB877EC49656FBCCC /* Pods_Practice_RxSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33FEDAEC68BC1ABCF234000 /* Pods_Practice_RxSwiftTests.framework */; };
 		D10E2E9496EDF39E7761A438 /* Pods_Practice_RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6DEC663C41267949B53011 /* Pods_Practice_RxSwift.framework */; };
+		F3031B2B244626DB00BDE8AF /* Chapter10CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3031B2A244626DB00BDE8AF /* Chapter10CategoriesViewController.swift */; };
+		F3031B2D2446272600BDE8AF /* Chapter10EOCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3031B2C2446272600BDE8AF /* Chapter10EOCategory.swift */; };
+		F3031B2F2446281A00BDE8AF /* Chapter10EOError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3031B2E2446281A00BDE8AF /* Chapter10EOError.swift */; };
+		F3031B312446287C00BDE8AF /* Chapter10EOLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3031B302446287C00BDE8AF /* Chapter10EOLocation.swift */; };
+		F3031B3324462B8800BDE8AF /* Chapter10EOEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3031B3224462B8800BDE8AF /* Chapter10EOEvent.swift */; };
+		F3031B3524462F4D00BDE8AF /* Chapter10EOEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3031B3424462F4D00BDE8AF /* Chapter10EOEnvelope.swift */; };
+		F3031B372446314000BDE8AF /* Chapter10EONET.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3031B362446314000BDE8AF /* Chapter10EONET.swift */; };
 		F30CECE0243BDFC300750820 /* Chapter8TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30CECDF243BDFC300750820 /* Chapter8TableViewController.swift */; };
 		F30CECE2243BDFEB00750820 /* Chapter8Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30CECE1243BDFEB00750820 /* Chapter8Event.swift */; };
 		F3533FCA243A87AF00D0ABA3 /* Chapter6PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3533FC6243A87AF00D0ABA3 /* Chapter6PhotosCollectionViewCell.swift */; };
@@ -33,6 +40,8 @@
 		F35BC14124324561009788D6 /* Chapter2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35BC14024324561009788D6 /* Chapter2TableViewCell.swift */; };
 		F37FB8A9243D33F900B60856 /* Chapter9TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37FB8A8243D33F900B60856 /* Chapter9TableViewCell.swift */; };
 		F37FB8AB243D340A00B60856 /* Chapter9TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37FB8AA243D340A00B60856 /* Chapter9TableViewController.swift */; };
+		F3CD7296245253840014CFE6 /* Chapter10EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7295245253840014CFE6 /* Chapter10EventsViewController.swift */; };
+		F3CD7298245272A90014CFE6 /* Chapter10EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7297245272A90014CFE6 /* Chapter10EventCell.swift */; };
 		F3FB80E424352CE3007457CD /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = F3FB80E324352CE3007457CD /* test.txt */; };
 		F3FB80E7243536C8007457CD /* Chapter3TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FB80E6243536C8007457CD /* Chapter3TableViewController.swift */; };
 		F3FB80E9243536F2007457CD /* Chapter3TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FB80E8243536F2007457CD /* Chapter3TableViewCell.swift */; };
@@ -72,6 +81,13 @@
 		AC617FAD19A6BE46FFA24404 /* Pods-Practice_RxSwift-Practice_RxSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Practice_RxSwift-Practice_RxSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-Practice_RxSwift-Practice_RxSwiftUITests/Pods-Practice_RxSwift-Practice_RxSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D5A04BC7382043E44B9B1191 /* Pods-Practice_RxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Practice_RxSwift.debug.xcconfig"; path = "Target Support Files/Pods-Practice_RxSwift/Pods-Practice_RxSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		E14A30D9434C9326D8C8A625 /* Pods_Practice_RxSwift_Practice_RxSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Practice_RxSwift_Practice_RxSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3031B2A244626DB00BDE8AF /* Chapter10CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter10CategoriesViewController.swift; sourceTree = "<group>"; };
+		F3031B2C2446272600BDE8AF /* Chapter10EOCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter10EOCategory.swift; sourceTree = "<group>"; };
+		F3031B2E2446281A00BDE8AF /* Chapter10EOError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter10EOError.swift; sourceTree = "<group>"; };
+		F3031B302446287C00BDE8AF /* Chapter10EOLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter10EOLocation.swift; sourceTree = "<group>"; };
+		F3031B3224462B8800BDE8AF /* Chapter10EOEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter10EOEvent.swift; sourceTree = "<group>"; };
+		F3031B3424462F4D00BDE8AF /* Chapter10EOEnvelope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter10EOEnvelope.swift; sourceTree = "<group>"; };
+		F3031B362446314000BDE8AF /* Chapter10EONET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter10EONET.swift; sourceTree = "<group>"; };
 		F30CECDF243BDFC300750820 /* Chapter8TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter8TableViewController.swift; sourceTree = "<group>"; };
 		F30CECE1243BDFEB00750820 /* Chapter8Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter8Event.swift; sourceTree = "<group>"; };
 		F3533FC6243A87AF00D0ABA3 /* Chapter6PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter6PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -101,6 +117,8 @@
 		F35BC14024324561009788D6 /* Chapter2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter2TableViewCell.swift; sourceTree = "<group>"; };
 		F37FB8A8243D33F900B60856 /* Chapter9TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter9TableViewCell.swift; sourceTree = "<group>"; };
 		F37FB8AA243D340A00B60856 /* Chapter9TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter9TableViewController.swift; sourceTree = "<group>"; };
+		F3CD7295245253840014CFE6 /* Chapter10EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter10EventsViewController.swift; sourceTree = "<group>"; };
+		F3CD7297245272A90014CFE6 /* Chapter10EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter10EventCell.swift; sourceTree = "<group>"; };
 		F3FB80E324352CE3007457CD /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 		F3FB80E6243536C8007457CD /* Chapter3TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter3TableViewController.swift; sourceTree = "<group>"; };
 		F3FB80E8243536F2007457CD /* Chapter3TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter3TableViewCell.swift; sourceTree = "<group>"; };
@@ -162,6 +180,22 @@
 				21625B09F99130513073CCAC /* Pods-Practice_RxSwiftTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F3031B29244626AF00BDE8AF /* Chapter 10 */ = {
+			isa = PBXGroup;
+			children = (
+				F3031B2A244626DB00BDE8AF /* Chapter10CategoriesViewController.swift */,
+				F3031B2C2446272600BDE8AF /* Chapter10EOCategory.swift */,
+				F3031B2E2446281A00BDE8AF /* Chapter10EOError.swift */,
+				F3031B302446287C00BDE8AF /* Chapter10EOLocation.swift */,
+				F3031B3224462B8800BDE8AF /* Chapter10EOEvent.swift */,
+				F3031B3424462F4D00BDE8AF /* Chapter10EOEnvelope.swift */,
+				F3031B362446314000BDE8AF /* Chapter10EONET.swift */,
+				F3CD7295245253840014CFE6 /* Chapter10EventsViewController.swift */,
+				F3CD7297245272A90014CFE6 /* Chapter10EventCell.swift */,
+			);
+			path = "Chapter 10";
 			sourceTree = "<group>";
 		};
 		F30CECDE243BDF5100750820 /* Chapter 8 */ = {
@@ -262,6 +296,7 @@
 		F35BC13C24324538009788D6 /* Chapters */ = {
 			isa = PBXGroup;
 			children = (
+				F3031B29244626AF00BDE8AF /* Chapter 10 */,
 				F37FB8A7243D33DC00B60856 /* Chapter 9 */,
 				F30CECDE243BDF5100750820 /* Chapter 8 */,
 				F3533FD2243ACF6C00D0ABA3 /* Chapter 7 */,
@@ -590,22 +625,31 @@
 				F3FB810A2436659B007457CD /* Chapter4PhotoWriter.swift in Sources */,
 				F35BC13F24324551009788D6 /* Chapter2TableViewController.swift in Sources */,
 				F35BC108243242FC009788D6 /* AppDelegate.swift in Sources */,
+				F3031B2D2446272600BDE8AF /* Chapter10EOCategory.swift in Sources */,
 				F3FB810624364D53007457CD /* Chapter4PhotosCollectionViewController.swift in Sources */,
 				F3FB80E9243536F2007457CD /* Chapter3TableViewCell.swift in Sources */,
 				F3533FCD243A87AF00D0ABA3 /* Chapter6PhotosCollectionViewController.swift in Sources */,
+				F3031B3324462B8800BDE8AF /* Chapter10EOEvent.swift in Sources */,
 				F3FB80E7243536C8007457CD /* Chapter3TableViewController.swift in Sources */,
 				F3FB80EC243544B9007457CD /* Chapter4ViewController.swift in Sources */,
+				F3031B2F2446281A00BDE8AF /* Chapter10EOError.swift in Sources */,
 				F3533FD1243ACD2100D0ABA3 /* UIViewController.swift in Sources */,
+				F3031B3524462F4D00BDE8AF /* Chapter10EOEnvelope.swift in Sources */,
+				F3CD7298245272A90014CFE6 /* Chapter10EventCell.swift in Sources */,
 				F35BC14124324561009788D6 /* Chapter2TableViewCell.swift in Sources */,
 				F35BC13924324362009788D6 /* MainTableViewCell.swift in Sources */,
 				F3FC498F2436936E002BCE5F /* Chapter5TableViewCell.swift in Sources */,
 				F30CECE2243BDFEB00750820 /* Chapter8Event.swift in Sources */,
+				F3031B312446287C00BDE8AF /* Chapter10EOLocation.swift in Sources */,
 				F3533FCC243A87AF00D0ABA3 /* Chapter6PhotoWriter.swift in Sources */,
 				F3533FD4243AD02200D0ABA3 /* Chapter7TableViewController.swift in Sources */,
 				F3533FCF243A915F00D0ABA3 /* PHPhotoLibrary.swift in Sources */,
+				F3CD7296245253840014CFE6 /* Chapter10EventsViewController.swift in Sources */,
 				F37FB8AB243D340A00B60856 /* Chapter9TableViewController.swift in Sources */,
+				F3031B372446314000BDE8AF /* Chapter10EONET.swift in Sources */,
 				F30CECE0243BDFC300750820 /* Chapter8TableViewController.swift in Sources */,
 				F35BC10A243242FC009788D6 /* SceneDelegate.swift in Sources */,
+				F3031B2B244626DB00BDE8AF /* Chapter10CategoriesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
