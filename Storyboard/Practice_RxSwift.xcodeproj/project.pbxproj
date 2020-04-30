@@ -40,6 +40,12 @@
 		F35BC14124324561009788D6 /* Chapter2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35BC14024324561009788D6 /* Chapter2TableViewCell.swift */; };
 		F37FB8A9243D33F900B60856 /* Chapter9TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37FB8A8243D33F900B60856 /* Chapter9TableViewCell.swift */; };
 		F37FB8AB243D340A00B60856 /* Chapter9TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37FB8AA243D340A00B60856 /* Chapter9TableViewController.swift */; };
+		F3B5AD6C24535FEE003A68BE /* Chapter11TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5AD6B24535FEE003A68BE /* Chapter11TableViewCell.swift */; };
+		F3B5AD6E24536007003A68BE /* Chapter11TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5AD6D24536007003A68BE /* Chapter11TableViewController.swift */; };
+		F3B5AD702453638F003A68BE /* DispatchSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5AD6F2453638F003A68BE /* DispatchSource.swift */; };
+		F3B5AD722453659B003A68BE /* Chapter11Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5AD712453659B003A68BE /* Chapter11Timeline.swift */; };
+		F3B5AD7424536736003A68BE /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5AD7324536736003A68BE /* UIStackView.swift */; };
+		F3B5AD762453676A003A68BE /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5AD752453676A003A68BE /* UILabel.swift */; };
 		F3CD7296245253840014CFE6 /* Chapter10EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7295245253840014CFE6 /* Chapter10EventsViewController.swift */; };
 		F3CD7298245272A90014CFE6 /* Chapter10EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7297245272A90014CFE6 /* Chapter10EventCell.swift */; };
 		F3FB80E424352CE3007457CD /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = F3FB80E324352CE3007457CD /* test.txt */; };
@@ -117,6 +123,12 @@
 		F35BC14024324561009788D6 /* Chapter2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter2TableViewCell.swift; sourceTree = "<group>"; };
 		F37FB8A8243D33F900B60856 /* Chapter9TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter9TableViewCell.swift; sourceTree = "<group>"; };
 		F37FB8AA243D340A00B60856 /* Chapter9TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter9TableViewController.swift; sourceTree = "<group>"; };
+		F3B5AD6B24535FEE003A68BE /* Chapter11TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter11TableViewCell.swift; sourceTree = "<group>"; };
+		F3B5AD6D24536007003A68BE /* Chapter11TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter11TableViewController.swift; sourceTree = "<group>"; };
+		F3B5AD6F2453638F003A68BE /* DispatchSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchSource.swift; sourceTree = "<group>"; };
+		F3B5AD712453659B003A68BE /* Chapter11Timeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter11Timeline.swift; sourceTree = "<group>"; };
+		F3B5AD7324536736003A68BE /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		F3B5AD752453676A003A68BE /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		F3CD7295245253840014CFE6 /* Chapter10EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter10EventsViewController.swift; sourceTree = "<group>"; };
 		F3CD7297245272A90014CFE6 /* Chapter10EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter10EventCell.swift; sourceTree = "<group>"; };
 		F3FB80E324352CE3007457CD /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
@@ -296,6 +308,7 @@
 		F35BC13C24324538009788D6 /* Chapters */ = {
 			isa = PBXGroup;
 			children = (
+				F3B5AD6A24535FD8003A68BE /* Chapter 11 */,
 				F3031B29244626AF00BDE8AF /* Chapter 10 */,
 				F37FB8A7243D33DC00B60856 /* Chapter 9 */,
 				F30CECDE243BDF5100750820 /* Chapter 8 */,
@@ -325,6 +338,16 @@
 				F37FB8AA243D340A00B60856 /* Chapter9TableViewController.swift */,
 			);
 			path = "Chapter 9";
+			sourceTree = "<group>";
+		};
+		F3B5AD6A24535FD8003A68BE /* Chapter 11 */ = {
+			isa = PBXGroup;
+			children = (
+				F3B5AD6B24535FEE003A68BE /* Chapter11TableViewCell.swift */,
+				F3B5AD6D24536007003A68BE /* Chapter11TableViewController.swift */,
+				F3B5AD712453659B003A68BE /* Chapter11Timeline.swift */,
+			);
+			path = "Chapter 11";
 			sourceTree = "<group>";
 		};
 		F3FB80E224352C99007457CD /* Resources */ = {
@@ -361,6 +384,9 @@
 				F3FB8101243632C3007457CD /* UIImage.swift */,
 				F3533FCE243A915F00D0ABA3 /* PHPhotoLibrary.swift */,
 				F3533FD0243ACD2100D0ABA3 /* UIViewController.swift */,
+				F3B5AD6F2453638F003A68BE /* DispatchSource.swift */,
+				F3B5AD7324536736003A68BE /* UIStackView.swift */,
+				F3B5AD752453676A003A68BE /* UILabel.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -620,6 +646,7 @@
 				F37FB8A9243D33F900B60856 /* Chapter9TableViewCell.swift in Sources */,
 				F3533FCA243A87AF00D0ABA3 /* Chapter6PhotosCollectionViewCell.swift in Sources */,
 				F35BC13B2432436F009788D6 /* MainTableViewController.swift in Sources */,
+				F3B5AD6C24535FEE003A68BE /* Chapter11TableViewCell.swift in Sources */,
 				F3533FD6243AD03100D0ABA3 /* Chapter7TableViewCell.swift in Sources */,
 				F3FB8102243632C3007457CD /* UIImage.swift in Sources */,
 				F3FB810A2436659B007457CD /* Chapter4PhotoWriter.swift in Sources */,
@@ -629,13 +656,17 @@
 				F3FB810624364D53007457CD /* Chapter4PhotosCollectionViewController.swift in Sources */,
 				F3FB80E9243536F2007457CD /* Chapter3TableViewCell.swift in Sources */,
 				F3533FCD243A87AF00D0ABA3 /* Chapter6PhotosCollectionViewController.swift in Sources */,
+				F3B5AD762453676A003A68BE /* UILabel.swift in Sources */,
+				F3B5AD7424536736003A68BE /* UIStackView.swift in Sources */,
 				F3031B3324462B8800BDE8AF /* Chapter10EOEvent.swift in Sources */,
+				F3B5AD6E24536007003A68BE /* Chapter11TableViewController.swift in Sources */,
 				F3FB80E7243536C8007457CD /* Chapter3TableViewController.swift in Sources */,
 				F3FB80EC243544B9007457CD /* Chapter4ViewController.swift in Sources */,
 				F3031B2F2446281A00BDE8AF /* Chapter10EOError.swift in Sources */,
 				F3533FD1243ACD2100D0ABA3 /* UIViewController.swift in Sources */,
 				F3031B3524462F4D00BDE8AF /* Chapter10EOEnvelope.swift in Sources */,
 				F3CD7298245272A90014CFE6 /* Chapter10EventCell.swift in Sources */,
+				F3B5AD722453659B003A68BE /* Chapter11Timeline.swift in Sources */,
 				F35BC14124324561009788D6 /* Chapter2TableViewCell.swift in Sources */,
 				F35BC13924324362009788D6 /* MainTableViewCell.swift in Sources */,
 				F3FC498F2436936E002BCE5F /* Chapter5TableViewCell.swift in Sources */,
@@ -650,6 +681,7 @@
 				F30CECE0243BDFC300750820 /* Chapter8TableViewController.swift in Sources */,
 				F35BC10A243242FC009788D6 /* SceneDelegate.swift in Sources */,
 				F3031B2B244626DB00BDE8AF /* Chapter10CategoriesViewController.swift in Sources */,
+				F3B5AD702453638F003A68BE /* DispatchSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,8 @@ import RxSwift
 
 class MainTableViewController: UITableViewController {
 
+    let number = 11
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,27 +32,27 @@ class MainTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return number
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as! MainTableViewCell
 
         // Configure the cell...
-        cell.name.text = "Chapter \(10 - indexPath.row)"
+        cell.name.text = "Chapter \(number - indexPath.row)"
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
-        case 9:
+        case number - 1:
             let _ = alert(title: "Hello!", text: "Welcome to RxSwift!")
                 .asObservable()
                 .take(1.0, scheduler: MainScheduler.instance)
                 .subscribe()
         default:
-            self.performSegue(withIdentifier: "ShowChapter\(10 - indexPath.row)", sender: self)
+            self.performSegue(withIdentifier: "ShowChapter\(number - indexPath.row)", sender: self)
         }
     }
 
