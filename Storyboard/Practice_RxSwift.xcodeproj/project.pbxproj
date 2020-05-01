@@ -43,9 +43,15 @@
 		F3B5AD6C24535FEE003A68BE /* Chapter11TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5AD6B24535FEE003A68BE /* Chapter11TableViewCell.swift */; };
 		F3B5AD6E24536007003A68BE /* Chapter11TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5AD6D24536007003A68BE /* Chapter11TableViewController.swift */; };
 		F3B5AD702453638F003A68BE /* DispatchSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5AD6F2453638F003A68BE /* DispatchSource.swift */; };
-		F3B5AD722453659B003A68BE /* Chapter11Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5AD712453659B003A68BE /* Chapter11Timeline.swift */; };
 		F3B5AD7424536736003A68BE /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5AD7324536736003A68BE /* UIStackView.swift */; };
 		F3B5AD762453676A003A68BE /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5AD752453676A003A68BE /* UILabel.swift */; };
+		F3C735BD245AE6FC0017C72A /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C735B7245AE6FC0017C72A /* Label.swift */; };
+		F3C735BE245AE6FC0017C72A /* SupportCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C735B8245AE6FC0017C72A /* SupportCode.swift */; };
+		F3C735BF245AE6FC0017C72A /* TimelineViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C735B9245AE6FC0017C72A /* TimelineViewBase.swift */; };
+		F3C735C0245AE6FC0017C72A /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C735BA245AE6FC0017C72A /* Timer.swift */; };
+		F3C735C1245AE6FC0017C72A /* HostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C735BB245AE6FC0017C72A /* HostView.swift */; };
+		F3C735C2245AE6FC0017C72A /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C735BC245AE6FC0017C72A /* StackView.swift */; };
+		F3C735C4245AE96B0017C72A /* Chapter11ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C735C3245AE96B0017C72A /* Chapter11ActionViewController.swift */; };
 		F3CD7296245253840014CFE6 /* Chapter10EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7295245253840014CFE6 /* Chapter10EventsViewController.swift */; };
 		F3CD7298245272A90014CFE6 /* Chapter10EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7297245272A90014CFE6 /* Chapter10EventCell.swift */; };
 		F3FB80E424352CE3007457CD /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = F3FB80E324352CE3007457CD /* test.txt */; };
@@ -126,9 +132,15 @@
 		F3B5AD6B24535FEE003A68BE /* Chapter11TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter11TableViewCell.swift; sourceTree = "<group>"; };
 		F3B5AD6D24536007003A68BE /* Chapter11TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter11TableViewController.swift; sourceTree = "<group>"; };
 		F3B5AD6F2453638F003A68BE /* DispatchSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchSource.swift; sourceTree = "<group>"; };
-		F3B5AD712453659B003A68BE /* Chapter11Timeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter11Timeline.swift; sourceTree = "<group>"; };
 		F3B5AD7324536736003A68BE /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		F3B5AD752453676A003A68BE /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		F3C735B7245AE6FC0017C72A /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		F3C735B8245AE6FC0017C72A /* SupportCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportCode.swift; sourceTree = "<group>"; };
+		F3C735B9245AE6FC0017C72A /* TimelineViewBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewBase.swift; sourceTree = "<group>"; };
+		F3C735BA245AE6FC0017C72A /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		F3C735BB245AE6FC0017C72A /* HostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostView.swift; sourceTree = "<group>"; };
+		F3C735BC245AE6FC0017C72A /* StackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
+		F3C735C3245AE96B0017C72A /* Chapter11ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter11ActionViewController.swift; sourceTree = "<group>"; };
 		F3CD7295245253840014CFE6 /* Chapter10EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter10EventsViewController.swift; sourceTree = "<group>"; };
 		F3CD7297245272A90014CFE6 /* Chapter10EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter10EventCell.swift; sourceTree = "<group>"; };
 		F3FB80E324352CE3007457CD /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
@@ -343,11 +355,25 @@
 		F3B5AD6A24535FD8003A68BE /* Chapter 11 */ = {
 			isa = PBXGroup;
 			children = (
+				F3C735B6245AE6C70017C72A /* Sources */,
 				F3B5AD6B24535FEE003A68BE /* Chapter11TableViewCell.swift */,
 				F3B5AD6D24536007003A68BE /* Chapter11TableViewController.swift */,
-				F3B5AD712453659B003A68BE /* Chapter11Timeline.swift */,
+				F3C735C3245AE96B0017C72A /* Chapter11ActionViewController.swift */,
 			);
 			path = "Chapter 11";
+			sourceTree = "<group>";
+		};
+		F3C735B6245AE6C70017C72A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F3C735BB245AE6FC0017C72A /* HostView.swift */,
+				F3C735B7245AE6FC0017C72A /* Label.swift */,
+				F3C735BC245AE6FC0017C72A /* StackView.swift */,
+				F3C735B8245AE6FC0017C72A /* SupportCode.swift */,
+				F3C735B9245AE6FC0017C72A /* TimelineViewBase.swift */,
+				F3C735BA245AE6FC0017C72A /* Timer.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		F3FB80E224352C99007457CD /* Resources */ = {
@@ -643,16 +669,20 @@
 				F3FB810824364E27007457CD /* Chapter4PhotosCollectionViewCell.swift in Sources */,
 				F3FC498D2436935C002BCE5F /* Chapter5TableViewController.swift in Sources */,
 				F3533FCB243A87AF00D0ABA3 /* Chapter6ViewController.swift in Sources */,
+				F3C735C1245AE6FC0017C72A /* HostView.swift in Sources */,
 				F37FB8A9243D33F900B60856 /* Chapter9TableViewCell.swift in Sources */,
 				F3533FCA243A87AF00D0ABA3 /* Chapter6PhotosCollectionViewCell.swift in Sources */,
 				F35BC13B2432436F009788D6 /* MainTableViewController.swift in Sources */,
 				F3B5AD6C24535FEE003A68BE /* Chapter11TableViewCell.swift in Sources */,
 				F3533FD6243AD03100D0ABA3 /* Chapter7TableViewCell.swift in Sources */,
+				F3C735BE245AE6FC0017C72A /* SupportCode.swift in Sources */,
 				F3FB8102243632C3007457CD /* UIImage.swift in Sources */,
+				F3C735C2245AE6FC0017C72A /* StackView.swift in Sources */,
 				F3FB810A2436659B007457CD /* Chapter4PhotoWriter.swift in Sources */,
 				F35BC13F24324551009788D6 /* Chapter2TableViewController.swift in Sources */,
 				F35BC108243242FC009788D6 /* AppDelegate.swift in Sources */,
 				F3031B2D2446272600BDE8AF /* Chapter10EOCategory.swift in Sources */,
+				F3C735BD245AE6FC0017C72A /* Label.swift in Sources */,
 				F3FB810624364D53007457CD /* Chapter4PhotosCollectionViewController.swift in Sources */,
 				F3FB80E9243536F2007457CD /* Chapter3TableViewCell.swift in Sources */,
 				F3533FCD243A87AF00D0ABA3 /* Chapter6PhotosCollectionViewController.swift in Sources */,
@@ -666,12 +696,13 @@
 				F3533FD1243ACD2100D0ABA3 /* UIViewController.swift in Sources */,
 				F3031B3524462F4D00BDE8AF /* Chapter10EOEnvelope.swift in Sources */,
 				F3CD7298245272A90014CFE6 /* Chapter10EventCell.swift in Sources */,
-				F3B5AD722453659B003A68BE /* Chapter11Timeline.swift in Sources */,
 				F35BC14124324561009788D6 /* Chapter2TableViewCell.swift in Sources */,
 				F35BC13924324362009788D6 /* MainTableViewCell.swift in Sources */,
 				F3FC498F2436936E002BCE5F /* Chapter5TableViewCell.swift in Sources */,
 				F30CECE2243BDFEB00750820 /* Chapter8Event.swift in Sources */,
+				F3C735BF245AE6FC0017C72A /* TimelineViewBase.swift in Sources */,
 				F3031B312446287C00BDE8AF /* Chapter10EOLocation.swift in Sources */,
+				F3C735C4245AE96B0017C72A /* Chapter11ActionViewController.swift in Sources */,
 				F3533FCC243A87AF00D0ABA3 /* Chapter6PhotoWriter.swift in Sources */,
 				F3533FD4243AD02200D0ABA3 /* Chapter7TableViewController.swift in Sources */,
 				F3533FCF243A915F00D0ABA3 /* PHPhotoLibrary.swift in Sources */,
@@ -682,6 +713,7 @@
 				F35BC10A243242FC009788D6 /* SceneDelegate.swift in Sources */,
 				F3031B2B244626DB00BDE8AF /* Chapter10CategoriesViewController.swift in Sources */,
 				F3B5AD702453638F003A68BE /* DispatchSource.swift in Sources */,
+				F3C735C0245AE6FC0017C72A /* Timer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

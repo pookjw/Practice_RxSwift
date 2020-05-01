@@ -8,6 +8,7 @@
 
 import Foundation
 
+/*
 public extension DispatchSource {
     class func timer(interval: Double, queue: DispatchQueue, handler: @escaping () -> Void) -> DispatchSourceTimer {
         let source = DispatchSource.makeTimerSource(queue: queue)
@@ -16,4 +17,4 @@ public extension DispatchSource {
         source.resume()
         return source
     }
-}
+}*/

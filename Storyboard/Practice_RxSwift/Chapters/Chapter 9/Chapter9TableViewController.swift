@@ -111,8 +111,14 @@ class Chapter9TableViewController: UITableViewController {
         let spanishCities = Observable.of("Madrid", "Barcelona", "Valencia")
         
         let observable2 = germanCities.concat(spanishCities)
+        print(type(of: observable2))
         observable2.subscribe(onNext: {print($0)})
         //Berlin Münich Frankfurt Madrid Barcelona Valencia
+        
+        let test1 = Observable.just(1)
+        let test2 = Observable.just(2)
+        let obs3 = test1.concat(test2)
+        print(type(of: obs3))
     }
     
     @objc private func action4(_ sender: UIButton) {
