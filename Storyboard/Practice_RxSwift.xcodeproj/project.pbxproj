@@ -19,6 +19,10 @@
 		F3031B372446314000BDE8AF /* Chapter10EONET.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3031B362446314000BDE8AF /* Chapter10EONET.swift */; };
 		F30CECE0243BDFC300750820 /* Chapter8TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30CECDF243BDFC300750820 /* Chapter8TableViewController.swift */; };
 		F30CECE2243BDFEB00750820 /* Chapter8Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30CECE1243BDFEB00750820 /* Chapter8Event.swift */; };
+		F3436000245EA40A0062CDCD /* Chapter12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3435FFF245EA40A0062CDCD /* Chapter12ViewController.swift */; };
+		F3436004245EA44F0062CDCD /* weather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3436002245EA44F0062CDCD /* weather.ttf */; };
+		F3436005245EA44F0062CDCD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F3436003245EA44F0062CDCD /* LICENSE */; };
+		F3436007245EA7C50062CDCD /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3436006245EA7C50062CDCD /* UIColor.swift */; };
 		F3533FCA243A87AF00D0ABA3 /* Chapter6PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3533FC6243A87AF00D0ABA3 /* Chapter6PhotosCollectionViewCell.swift */; };
 		F3533FCB243A87AF00D0ABA3 /* Chapter6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3533FC7243A87AF00D0ABA3 /* Chapter6ViewController.swift */; };
 		F3533FCC243A87AF00D0ABA3 /* Chapter6PhotoWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3533FC8243A87AF00D0ABA3 /* Chapter6PhotoWriter.swift */; };
@@ -40,6 +44,8 @@
 		F35BC14124324561009788D6 /* Chapter2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35BC14024324561009788D6 /* Chapter2TableViewCell.swift */; };
 		F37FB8A9243D33F900B60856 /* Chapter9TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37FB8A8243D33F900B60856 /* Chapter9TableViewCell.swift */; };
 		F37FB8AB243D340A00B60856 /* Chapter9TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37FB8AA243D340A00B60856 /* Chapter9TableViewController.swift */; };
+		F38C35B1245ED768000EEAF4 /* Chapter12ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38C35B0245ED768000EEAF4 /* Chapter12ApiController.swift */; };
+		F38C35B3245EE1AE000EEAF4 /* OpenWeatherApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38C35B2245EE1AE000EEAF4 /* OpenWeatherApiKey.swift */; };
 		F3B5AD6C24535FEE003A68BE /* Chapter11TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5AD6B24535FEE003A68BE /* Chapter11TableViewCell.swift */; };
 		F3B5AD6E24536007003A68BE /* Chapter11TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5AD6D24536007003A68BE /* Chapter11TableViewController.swift */; };
 		F3B5AD702453638F003A68BE /* DispatchSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5AD6F2453638F003A68BE /* DispatchSource.swift */; };
@@ -102,6 +108,10 @@
 		F3031B362446314000BDE8AF /* Chapter10EONET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter10EONET.swift; sourceTree = "<group>"; };
 		F30CECDF243BDFC300750820 /* Chapter8TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter8TableViewController.swift; sourceTree = "<group>"; };
 		F30CECE1243BDFEB00750820 /* Chapter8Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter8Event.swift; sourceTree = "<group>"; };
+		F3435FFF245EA40A0062CDCD /* Chapter12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter12ViewController.swift; sourceTree = "<group>"; };
+		F3436002245EA44F0062CDCD /* weather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = weather.ttf; sourceTree = "<group>"; };
+		F3436003245EA44F0062CDCD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F3436006245EA7C50062CDCD /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		F3533FC6243A87AF00D0ABA3 /* Chapter6PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter6PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		F3533FC7243A87AF00D0ABA3 /* Chapter6ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter6ViewController.swift; sourceTree = "<group>"; };
 		F3533FC8243A87AF00D0ABA3 /* Chapter6PhotoWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter6PhotoWriter.swift; sourceTree = "<group>"; };
@@ -129,6 +139,8 @@
 		F35BC14024324561009788D6 /* Chapter2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter2TableViewCell.swift; sourceTree = "<group>"; };
 		F37FB8A8243D33F900B60856 /* Chapter9TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter9TableViewCell.swift; sourceTree = "<group>"; };
 		F37FB8AA243D340A00B60856 /* Chapter9TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter9TableViewController.swift; sourceTree = "<group>"; };
+		F38C35B0245ED768000EEAF4 /* Chapter12ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter12ApiController.swift; sourceTree = "<group>"; };
+		F38C35B2245EE1AE000EEAF4 /* OpenWeatherApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherApiKey.swift; sourceTree = "<group>"; };
 		F3B5AD6B24535FEE003A68BE /* Chapter11TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter11TableViewCell.swift; sourceTree = "<group>"; };
 		F3B5AD6D24536007003A68BE /* Chapter11TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter11TableViewController.swift; sourceTree = "<group>"; };
 		F3B5AD6F2453638F003A68BE /* DispatchSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchSource.swift; sourceTree = "<group>"; };
@@ -231,6 +243,24 @@
 			path = "Chapter 8";
 			sourceTree = "<group>";
 		};
+		F3435FFE245EA3D80062CDCD /* Chapter 12 */ = {
+			isa = PBXGroup;
+			children = (
+				F3435FFF245EA40A0062CDCD /* Chapter12ViewController.swift */,
+				F38C35B0245ED768000EEAF4 /* Chapter12ApiController.swift */,
+			);
+			path = "Chapter 12";
+			sourceTree = "<group>";
+		};
+		F3436001245EA42D0062CDCD /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F3436003245EA44F0062CDCD /* LICENSE */,
+				F3436002245EA44F0062CDCD /* weather.ttf */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		F3533FC1243A873F00D0ABA3 /* Chapter 6 */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +306,7 @@
 		F35BC106243242FC009788D6 /* Practice_RxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				F3436001245EA42D0062CDCD /* Assets */,
 				F3FB8100243632A5007457CD /* Extensions */,
 				F3FB80E224352C99007457CD /* Resources */,
 				F35BC13C24324538009788D6 /* Chapters */,
@@ -320,6 +351,7 @@
 		F35BC13C24324538009788D6 /* Chapters */ = {
 			isa = PBXGroup;
 			children = (
+				F3435FFE245EA3D80062CDCD /* Chapter 12 */,
 				F3B5AD6A24535FD8003A68BE /* Chapter 11 */,
 				F3031B29244626AF00BDE8AF /* Chapter 10 */,
 				F37FB8A7243D33DC00B60856 /* Chapter 9 */,
@@ -380,6 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				F3FB80E324352CE3007457CD /* test.txt */,
+				F38C35B2245EE1AE000EEAF4 /* OpenWeatherApiKey.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -413,6 +446,7 @@
 				F3B5AD6F2453638F003A68BE /* DispatchSource.swift */,
 				F3B5AD7324536736003A68BE /* UIStackView.swift */,
 				F3B5AD752453676A003A68BE /* UILabel.swift */,
+				F3436006245EA7C50062CDCD /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -535,9 +569,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3436005245EA44F0062CDCD /* LICENSE in Resources */,
 				F35BC114243242FE009788D6 /* LaunchScreen.storyboard in Resources */,
 				F35BC111243242FE009788D6 /* Assets.xcassets in Resources */,
 				F3FB80E424352CE3007457CD /* test.txt in Resources */,
+				F3436004245EA44F0062CDCD /* weather.ttf in Resources */,
 				F35BC10F243242FC009788D6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -673,6 +709,7 @@
 				F37FB8A9243D33F900B60856 /* Chapter9TableViewCell.swift in Sources */,
 				F3533FCA243A87AF00D0ABA3 /* Chapter6PhotosCollectionViewCell.swift in Sources */,
 				F35BC13B2432436F009788D6 /* MainTableViewController.swift in Sources */,
+				F38C35B1245ED768000EEAF4 /* Chapter12ApiController.swift in Sources */,
 				F3B5AD6C24535FEE003A68BE /* Chapter11TableViewCell.swift in Sources */,
 				F3533FD6243AD03100D0ABA3 /* Chapter7TableViewCell.swift in Sources */,
 				F3C735BE245AE6FC0017C72A /* SupportCode.swift in Sources */,
@@ -685,6 +722,7 @@
 				F3C735BD245AE6FC0017C72A /* Label.swift in Sources */,
 				F3FB810624364D53007457CD /* Chapter4PhotosCollectionViewController.swift in Sources */,
 				F3FB80E9243536F2007457CD /* Chapter3TableViewCell.swift in Sources */,
+				F3436007245EA7C50062CDCD /* UIColor.swift in Sources */,
 				F3533FCD243A87AF00D0ABA3 /* Chapter6PhotosCollectionViewController.swift in Sources */,
 				F3B5AD762453676A003A68BE /* UILabel.swift in Sources */,
 				F3B5AD7424536736003A68BE /* UIStackView.swift in Sources */,
@@ -700,6 +738,7 @@
 				F35BC13924324362009788D6 /* MainTableViewCell.swift in Sources */,
 				F3FC498F2436936E002BCE5F /* Chapter5TableViewCell.swift in Sources */,
 				F30CECE2243BDFEB00750820 /* Chapter8Event.swift in Sources */,
+				F3436000245EA40A0062CDCD /* Chapter12ViewController.swift in Sources */,
 				F3C735BF245AE6FC0017C72A /* TimelineViewBase.swift in Sources */,
 				F3031B312446287C00BDE8AF /* Chapter10EOLocation.swift in Sources */,
 				F3C735C4245AE96B0017C72A /* Chapter11ActionViewController.swift in Sources */,
@@ -712,6 +751,7 @@
 				F30CECE0243BDFC300750820 /* Chapter8TableViewController.swift in Sources */,
 				F35BC10A243242FC009788D6 /* SceneDelegate.swift in Sources */,
 				F3031B2B244626DB00BDE8AF /* Chapter10CategoriesViewController.swift in Sources */,
+				F38C35B3245EE1AE000EEAF4 /* OpenWeatherApiKey.swift in Sources */,
 				F3B5AD702453638F003A68BE /* DispatchSource.swift in Sources */,
 				F3C735C0245AE6FC0017C72A /* Timer.swift in Sources */,
 			);

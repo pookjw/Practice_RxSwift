@@ -11,7 +11,7 @@ import RxSwift
 
 class MainTableViewController: UITableViewController {
 
-    let number = 11
+    let number = 12
     
     override func viewDidLoad() {
         super.viewDidLoad()
