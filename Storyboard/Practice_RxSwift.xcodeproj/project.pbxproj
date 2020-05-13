@@ -19,6 +19,9 @@
 		F3031B372446314000BDE8AF /* Chapter10EONET.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3031B362446314000BDE8AF /* Chapter10EONET.swift */; };
 		F30CECE0243BDFC300750820 /* Chapter8TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30CECDF243BDFC300750820 /* Chapter8TableViewController.swift */; };
 		F30CECE2243BDFEB00750820 /* Chapter8Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30CECE1243BDFEB00750820 /* Chapter8Event.swift */; };
+		F33D616E246B9DBC001EE5C6 /* Chapter14ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33D616C246B9DBC001EE5C6 /* Chapter14ApiController.swift */; };
+		F33D616F246B9DBC001EE5C6 /* Chapter14ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33D616D246B9DBC001EE5C6 /* Chapter14ViewController.swift */; };
+		F33D6171246BA22A001EE5C6 /* Chapter14RxReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33D6170246BA22A001EE5C6 /* Chapter14RxReachability.swift */; };
 		F3436000245EA40A0062CDCD /* Chapter12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3435FFF245EA40A0062CDCD /* Chapter12ViewController.swift */; };
 		F3436004245EA44F0062CDCD /* weather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3436002245EA44F0062CDCD /* weather.ttf */; };
 		F3436005245EA44F0062CDCD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F3436003245EA44F0062CDCD /* LICENSE */; };
@@ -112,6 +115,9 @@
 		F3031B362446314000BDE8AF /* Chapter10EONET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter10EONET.swift; sourceTree = "<group>"; };
 		F30CECDF243BDFC300750820 /* Chapter8TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter8TableViewController.swift; sourceTree = "<group>"; };
 		F30CECE1243BDFEB00750820 /* Chapter8Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter8Event.swift; sourceTree = "<group>"; };
+		F33D616C246B9DBC001EE5C6 /* Chapter14ApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter14ApiController.swift; sourceTree = "<group>"; };
+		F33D616D246B9DBC001EE5C6 /* Chapter14ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter14ViewController.swift; sourceTree = "<group>"; };
+		F33D6170246BA22A001EE5C6 /* Chapter14RxReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter14RxReachability.swift; sourceTree = "<group>"; };
 		F3435FFF245EA40A0062CDCD /* Chapter12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter12ViewController.swift; sourceTree = "<group>"; };
 		F3436002245EA44F0062CDCD /* weather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = weather.ttf; sourceTree = "<group>"; };
 		F3436003245EA44F0062CDCD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -251,6 +257,16 @@
 			path = "Chapter 8";
 			sourceTree = "<group>";
 		};
+		F33D616B246B9D8E001EE5C6 /* Chapter 14 */ = {
+			isa = PBXGroup;
+			children = (
+				F33D616C246B9DBC001EE5C6 /* Chapter14ApiController.swift */,
+				F33D616D246B9DBC001EE5C6 /* Chapter14ViewController.swift */,
+				F33D6170246BA22A001EE5C6 /* Chapter14RxReachability.swift */,
+			);
+			path = "Chapter 14";
+			sourceTree = "<group>";
+		};
 		F3435FFE245EA3D80062CDCD /* Chapter 12 */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +375,7 @@
 		F35BC13C24324538009788D6 /* Chapters */ = {
 			isa = PBXGroup;
 			children = (
+				F33D616B246B9D8E001EE5C6 /* Chapter 14 */,
 				F3D5F84D245F003E0079CEA0 /* Chapter 13 */,
 				F3435FFE245EA3D80062CDCD /* Chapter 12 */,
 				F3B5AD6A24535FD8003A68BE /* Chapter 11 */,
@@ -722,12 +739,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F33D6171246BA22A001EE5C6 /* Chapter14RxReachability.swift in Sources */,
 				F3FB810824364E27007457CD /* Chapter4PhotosCollectionViewCell.swift in Sources */,
 				F3FC498D2436935C002BCE5F /* Chapter5TableViewController.swift in Sources */,
 				F3533FCB243A87AF00D0ABA3 /* Chapter6ViewController.swift in Sources */,
 				F3C735C1245AE6FC0017C72A /* HostView.swift in Sources */,
 				F37FB8A9243D33F900B60856 /* Chapter9TableViewCell.swift in Sources */,
 				F3533FCA243A87AF00D0ABA3 /* Chapter6PhotosCollectionViewCell.swift in Sources */,
+				F33D616E246B9DBC001EE5C6 /* Chapter14ApiController.swift in Sources */,
 				F35BC13B2432436F009788D6 /* MainTableViewController.swift in Sources */,
 				F38C35B1245ED768000EEAF4 /* Chapter12ApiController.swift in Sources */,
 				F3B5AD6C24535FEE003A68BE /* Chapter11TableViewCell.swift in Sources */,
@@ -742,6 +761,7 @@
 				F3C735BD245AE6FC0017C72A /* Label.swift in Sources */,
 				F3FB810624364D53007457CD /* Chapter4PhotosCollectionViewController.swift in Sources */,
 				F3FB80E9243536F2007457CD /* Chapter3TableViewCell.swift in Sources */,
+				F33D616F246B9DBC001EE5C6 /* Chapter14ViewController.swift in Sources */,
 				F3436007245EA7C50062CDCD /* UIColor.swift in Sources */,
 				F3533FCD243A87AF00D0ABA3 /* Chapter6PhotosCollectionViewController.swift in Sources */,
 				F3B5AD762453676A003A68BE /* UILabel.swift in Sources */,
