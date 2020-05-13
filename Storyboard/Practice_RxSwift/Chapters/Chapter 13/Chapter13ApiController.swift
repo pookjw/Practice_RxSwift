@@ -1,5 +1,5 @@
 //
-//  Chapter12ApiController.swift
+//  Chapter13ApiController.swift
 //  Practice_RxSwift
 //
 //  Created by pook on 5/3/20.
@@ -9,23 +9,39 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import CoreLocation
+import MapKit
 
-class Chapter12ApiController {
+class Chapter13ApiController {
     struct Weather: Decodable {
         let cityName: String
         let temperature: Int
         let humidity: Int
         let icon: String
+        let coordinate: CLLocationCoordinate2D
         
         static let empty = Weather(
-            cityName: "Unknown", temperature: -1000, humidity: 0, icon: iconNameToChar(icon: "e")
+            cityName: "Unknown",
+            temperature: -1000,
+            humidity: 0,
+            icon: iconNameToChar(icon: "e"),
+            coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0)
         )
         
-        init(cityName: String, temperature: Int, humidity: Int, icon: String) {
+        static let dummy = Weather(
+            cityName: "RxCity",
+            temperature: 20,
+            humidity: 90,
+            icon: iconNameToChar(icon: "01d"),
+            coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0)
+        )
+        
+        init(cityName: String, temperature: Int, humidity: Int, icon: String, coordinate: CLLocationCoordinate2D) {
             self.cityName = cityName
             self.temperature = temperature
             self.humidity = humidity
             self.icon = icon
+            self.coordinate = coordinate
         }
         
         init(from decoder: Decoder) throws {
@@ -37,12 +53,16 @@ class Chapter12ApiController {
             let mainInfo = try values.nestedContainer(keyedBy: MainKeys.self, forKey: .main)
             temperature = Int(try mainInfo.decode(Double.self, forKey: .temp))
             humidity = try mainInfo.decode(Int.self, forKey: .humidity)
+            
+            let coordinate = try values.decode(Coordinate.self, forKey: .coordinate)
+            self.coordinate = CLLocationCoordinate2D(latitude: coordinate.lat, longitude: coordinate.lon)
         }
         
         enum CodingKeys: String, CodingKey {
             case cityName = "name"
             case main
             case weather
+            case coordinate = "coord"
         }
         
         enum MainKeys: String, CodingKey {
@@ -56,10 +76,15 @@ class Chapter12ApiController {
             let description: String
             let icon: String
         }
+        
+        private struct Coordinate: Decodable {
+            let lat: CLLocationDegrees
+            let lon: CLLocationDegrees
+        }
     }
     
     /// The shared instance
-    static var shared = Chapter12ApiController()
+    static var shared = Chapter13ApiController()
     
     /// The api key to communicate with openweathermap.org
     /// Create you own on https://home.openweathermap.org/users/sign_up
@@ -77,6 +102,20 @@ class Chapter12ApiController {
     // MARK: - Api Calls
     func currentWeather(city: String) -> Observable<Weather> {
         return buildRequest(pathComponent: "weather", params: [("q", city)])
+            .map { data in
+                let decoder = JSONDecoder()
+                return try decoder.decode(Weather.self, from: data)
+        }
+    }
+    
+    func currentWeather(at coordinate: CLLocationCoordinate2D) -> Observable<Weather> {
+        return buildRequest(
+            pathComponent: "weather",
+            params: [
+                ("lat", "\(coordinate.latitude)"),
+                ("lon", "\(coordinate.longitude)")
+            ]
+        )
             .map { data in
                 let decoder = JSONDecoder()
                 return try decoder.decode(Weather.self, from: data)
@@ -124,7 +163,7 @@ class Chapter12ApiController {
         case "01n":
             return "\u{f110}"
         case "02d":
-            return "\u{f112}"
+            return "\u{f113}"
         case "02n":
             return "\u{f104}"
         case "03d", "03n":
@@ -143,6 +182,69 @@ class Chapter12ApiController {
             return "\u{f10e}"
         default:
             return "E"
+        }
+    }
+    
+    static func imageFromText(text: String, font: UIFont) -> UIImage {
+        let size = text.size(withAttributes: [NSAttributedString.Key.font: font])
+        
+        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
+        text.draw(at: CGPoint(x: 0, y: 0), withAttributes: [NSAttributedString.Key.font: font])
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return image ?? UIImage()
+    }
+}
+
+extension Chapter13ApiController.Weather {
+    
+    func overlay() -> Overlay {
+        let coordinates: [CLLocationCoordinate2D] = [
+            CLLocationCoordinate2D(latitude: coordinate.latitude - 0.25,
+                                   longitude: coordinate.longitude - 0.25),
+            CLLocationCoordinate2D(latitude: coordinate.latitude + 0.25,
+                                   longitude: coordinate.longitude + 0.25)
+        ]
+        
+        let points: [MKMapPoint] = coordinates.map { MKMapPoint($0) }
+        let rects: [MKMapRect] = points.map { MKMapRect(origin: $0, size: MKMapSize(width: 0, height: 0)) }
+        let mapRectUnion: (MKMapRect, MKMapRect) -> MKMapRect = { $0.union($1) }
+        let fittingRect = rects.reduce(MKMapRect.null, mapRectUnion)
+        return Overlay(icon: icon, coordinate: coordinate, boundingMapRect: fittingRect)
+    }
+    
+    class Overlay: NSObject, MKOverlay {
+        var coordinate: CLLocationCoordinate2D
+        var boundingMapRect: MKMapRect
+        let icon: String
+        
+        init(icon: String, coordinate: CLLocationCoordinate2D, boundingMapRect: MKMapRect) {
+            self.coordinate = coordinate
+            self.boundingMapRect = boundingMapRect
+            self.icon = icon
+        }
+    }
+    
+    class OverlayView: MKOverlayRenderer {
+        var overlayIcon: String
+        
+        init(overlay: MKOverlay, overlayIcon: String) {
+            self.overlayIcon = overlayIcon
+            super.init(overlay: overlay)
+        }
+        
+        public override func draw(_ mapRect: MKMapRect, zoomScale: MKZoomScale, in context: CGContext) {
+            let imageReference = Chapter13ApiController.imageFromText(text: overlayIcon, font: UIFont(name: "Flaticon", size: 32.0)!).cgImage
+            let theMapRect = overlay.boundingMapRect
+            let theRect = rect(for: theMapRect)
+            
+            context.scaleBy(x: 1.0, y: -1.0)
+            context.translateBy(x: 0.0, y: -theRect.size.height)
+            context.draw(imageReference!, in: theRect)
+            
+            print("Drew!")
         }
     }
 }

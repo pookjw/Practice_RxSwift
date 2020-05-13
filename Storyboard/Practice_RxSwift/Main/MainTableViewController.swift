@@ -11,7 +11,8 @@ import RxSwift
 
 class MainTableViewController: UITableViewController {
 
-    let number = 12
+    let number = 13
+    let automatically_navigate = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,9 @@ class MainTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        //self.performSegue(withIdentifier: "ShowChapter\(number)", sender: self)
+        if automatically_navigate {
+            self.performSegue(withIdentifier: "ShowChapter\(number)", sender: self)
+        }
     }
 
     // MARK: - Table view data source
