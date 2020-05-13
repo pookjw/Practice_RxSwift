@@ -12,6 +12,8 @@ import RxCocoa
 import CoreLocation
 import MapKit
 
+typealias Chapter14Weather = Chapter14ApiController.Weather
+
 class Chapter14ApiController {
     struct Weather: Decodable {
         let cityName: String
@@ -83,12 +85,18 @@ class Chapter14ApiController {
         }
     }
     
+    enum ApiError: Error {
+        case cityNotFound
+        case serverFailure
+        case invalidKey
+    }
+    
     /// The shared instance
     static var shared = Chapter14ApiController()
     
     /// The api key to communicate with openweathermap.org
     /// Create you own on https://home.openweathermap.org/users/sign_up
-    private let apiKey = OpenWeatherApiKey
+    let apiKey = BehaviorSubject(value: OpenWeatherApiKey)
     
     /// API base URL
     let baseURL = URL(string: "http://api.openweathermap.org/data/2.5")!
@@ -126,7 +134,7 @@ class Chapter14ApiController {
     private func buildRequest(method: String = "GET", pathComponent: String, params: [(String, String)]) -> Observable<Data> {
         let url = baseURL.appendingPathComponent(pathComponent)
         var request = URLRequest(url: url)
-        let keyQueryItem = URLQueryItem(name: "appid", value: apiKey)
+        let keyQueryItem = URLQueryItem(name: "appid", value: try? self.apiKey.value())
         let unitsQueryItem = URLQueryItem(name: "units", value: "metric")
         let urlComponents = NSURLComponents(url: url, resolvingAgainstBaseURL: true)!
         
@@ -149,7 +157,19 @@ class Chapter14ApiController {
         
         let session = URLSession.shared
         
-        return session.rx.data(request: request)
+        return session.rx.response(request: request).map { response, data in
+            switch response.statusCode {
+            case 200..<300:
+                return data
+            case 401:
+                throw ApiError.invalidKey
+            case 400..<500:
+                throw ApiError.cityNotFound
+            default:
+                throw ApiError.serverFailure
+            }
+            
+        }
     }
     
     /**

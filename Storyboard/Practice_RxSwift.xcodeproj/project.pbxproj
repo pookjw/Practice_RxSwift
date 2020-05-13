@@ -19,6 +19,8 @@
 		F3031B372446314000BDE8AF /* Chapter10EONET.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3031B362446314000BDE8AF /* Chapter10EONET.swift */; };
 		F30CECE0243BDFC300750820 /* Chapter8TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30CECDF243BDFC300750820 /* Chapter8TableViewController.swift */; };
 		F30CECE2243BDFEB00750820 /* Chapter8Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30CECE1243BDFEB00750820 /* Chapter8Event.swift */; };
+		F3367734246BAF7F008F9600 /* Chapter14InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3367733246BAF7F008F9600 /* Chapter14InfoView.swift */; };
+		F3367738246BAFE3008F9600 /* Chapter14InfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3367737246BAFE3008F9600 /* Chapter14InfoView.xib */; };
 		F33D616E246B9DBC001EE5C6 /* Chapter14ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33D616C246B9DBC001EE5C6 /* Chapter14ApiController.swift */; };
 		F33D616F246B9DBC001EE5C6 /* Chapter14ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33D616D246B9DBC001EE5C6 /* Chapter14ViewController.swift */; };
 		F33D6171246BA22A001EE5C6 /* Chapter14RxReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33D6170246BA22A001EE5C6 /* Chapter14RxReachability.swift */; };
@@ -115,6 +117,8 @@
 		F3031B362446314000BDE8AF /* Chapter10EONET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter10EONET.swift; sourceTree = "<group>"; };
 		F30CECDF243BDFC300750820 /* Chapter8TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter8TableViewController.swift; sourceTree = "<group>"; };
 		F30CECE1243BDFEB00750820 /* Chapter8Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter8Event.swift; sourceTree = "<group>"; };
+		F3367733246BAF7F008F9600 /* Chapter14InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter14InfoView.swift; sourceTree = "<group>"; };
+		F3367737246BAFE3008F9600 /* Chapter14InfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Chapter14InfoView.xib; sourceTree = "<group>"; };
 		F33D616C246B9DBC001EE5C6 /* Chapter14ApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter14ApiController.swift; sourceTree = "<group>"; };
 		F33D616D246B9DBC001EE5C6 /* Chapter14ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter14ViewController.swift; sourceTree = "<group>"; };
 		F33D6170246BA22A001EE5C6 /* Chapter14RxReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter14RxReachability.swift; sourceTree = "<group>"; };
@@ -263,6 +267,8 @@
 				F33D616C246B9DBC001EE5C6 /* Chapter14ApiController.swift */,
 				F33D616D246B9DBC001EE5C6 /* Chapter14ViewController.swift */,
 				F33D6170246BA22A001EE5C6 /* Chapter14RxReachability.swift */,
+				F3367733246BAF7F008F9600 /* Chapter14InfoView.swift */,
+				F3367737246BAFE3008F9600 /* Chapter14InfoView.xib */,
 			);
 			path = "Chapter 14";
 			sourceTree = "<group>";
@@ -609,6 +615,7 @@
 				F3436005245EA44F0062CDCD /* LICENSE in Resources */,
 				F35BC114243242FE009788D6 /* LaunchScreen.storyboard in Resources */,
 				F35BC111243242FE009788D6 /* Assets.xcassets in Resources */,
+				F3367738246BAFE3008F9600 /* Chapter14InfoView.xib in Resources */,
 				F3FB80E424352CE3007457CD /* test.txt in Resources */,
 				F3436004245EA44F0062CDCD /* weather.ttf in Resources */,
 				F35BC10F243242FC009788D6 /* Main.storyboard in Resources */,
@@ -776,6 +783,7 @@
 				F3031B3524462F4D00BDE8AF /* Chapter10EOEnvelope.swift in Sources */,
 				F3CD7298245272A90014CFE6 /* Chapter10EventCell.swift in Sources */,
 				F35BC14124324561009788D6 /* Chapter2TableViewCell.swift in Sources */,
+				F3367734246BAF7F008F9600 /* Chapter14InfoView.swift in Sources */,
 				F35BC13924324362009788D6 /* MainTableViewCell.swift in Sources */,
 				F3FC498F2436936E002BCE5F /* Chapter5TableViewCell.swift in Sources */,
 				F30CECE2243BDFEB00750820 /* Chapter8Event.swift in Sources */,
