@@ -11,7 +11,7 @@ import RxSwift
 
 class MainTableViewController: UITableViewController {
 
-    let number = 14
+    let number = 15
     let automatically_navigate = true
     
     override func viewDidLoad() {

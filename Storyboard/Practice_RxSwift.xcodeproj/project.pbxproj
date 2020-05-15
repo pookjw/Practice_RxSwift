@@ -50,6 +50,9 @@
 		F37FB8A9243D33F900B60856 /* Chapter9TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37FB8A8243D33F900B60856 /* Chapter9TableViewCell.swift */; };
 		F37FB8AB243D340A00B60856 /* Chapter9TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37FB8AA243D340A00B60856 /* Chapter9TableViewController.swift */; };
 		F3825928245F272C00D4AD94 /* MKMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3825927245F272C00D4AD94 /* MKMapView.swift */; };
+		F38A4A60246E651B00693EE7 /* Chapter15TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A4A5F246E651B00693EE7 /* Chapter15TableViewController.swift */; };
+		F38A4A63246E653D00693EE7 /* Chapter15TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A4A62246E653D00693EE7 /* Chapter15TableViewCell.swift */; };
+		F38A4A67246E671700693EE7 /* Chapter15Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A4A66246E671700693EE7 /* Chapter15Utils.swift */; };
 		F38C35B1245ED768000EEAF4 /* Chapter12ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38C35B0245ED768000EEAF4 /* Chapter12ApiController.swift */; };
 		F38C35B3245EE1AE000EEAF4 /* OpenWeatherApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38C35B2245EE1AE000EEAF4 /* OpenWeatherApiKey.swift */; };
 		F3B5AD6C24535FEE003A68BE /* Chapter11TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5AD6B24535FEE003A68BE /* Chapter11TableViewCell.swift */; };
@@ -154,6 +157,9 @@
 		F37FB8A8243D33F900B60856 /* Chapter9TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter9TableViewCell.swift; sourceTree = "<group>"; };
 		F37FB8AA243D340A00B60856 /* Chapter9TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter9TableViewController.swift; sourceTree = "<group>"; };
 		F3825927245F272C00D4AD94 /* MKMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapView.swift; sourceTree = "<group>"; };
+		F38A4A5F246E651B00693EE7 /* Chapter15TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter15TableViewController.swift; sourceTree = "<group>"; };
+		F38A4A62246E653D00693EE7 /* Chapter15TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter15TableViewCell.swift; sourceTree = "<group>"; };
+		F38A4A66246E671700693EE7 /* Chapter15Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter15Utils.swift; sourceTree = "<group>"; };
 		F38C35B0245ED768000EEAF4 /* Chapter12ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter12ApiController.swift; sourceTree = "<group>"; };
 		F38C35B2245EE1AE000EEAF4 /* OpenWeatherApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherApiKey.swift; sourceTree = "<group>"; };
 		F3B5AD6B24535FEE003A68BE /* Chapter11TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter11TableViewCell.swift; sourceTree = "<group>"; };
@@ -381,6 +387,7 @@
 		F35BC13C24324538009788D6 /* Chapters */ = {
 			isa = PBXGroup;
 			children = (
+				F38A4A5E246E64ED00693EE7 /* Chapter 15 */,
 				F33D616B246B9D8E001EE5C6 /* Chapter 14 */,
 				F3D5F84D245F003E0079CEA0 /* Chapter 13 */,
 				F3435FFE245EA3D80062CDCD /* Chapter 12 */,
@@ -414,6 +421,16 @@
 				F37FB8AA243D340A00B60856 /* Chapter9TableViewController.swift */,
 			);
 			path = "Chapter 9";
+			sourceTree = "<group>";
+		};
+		F38A4A5E246E64ED00693EE7 /* Chapter 15 */ = {
+			isa = PBXGroup;
+			children = (
+				F38A4A5F246E651B00693EE7 /* Chapter15TableViewController.swift */,
+				F38A4A62246E653D00693EE7 /* Chapter15TableViewCell.swift */,
+				F38A4A66246E671700693EE7 /* Chapter15Utils.swift */,
+			);
+			path = "Chapter 15";
 			sourceTree = "<group>";
 		};
 		F3B5AD6A24535FD8003A68BE /* Chapter 11 */ = {
@@ -763,6 +780,8 @@
 				F3C735C2245AE6FC0017C72A /* StackView.swift in Sources */,
 				F3FB810A2436659B007457CD /* Chapter4PhotoWriter.swift in Sources */,
 				F35BC13F24324551009788D6 /* Chapter2TableViewController.swift in Sources */,
+				F38A4A63246E653D00693EE7 /* Chapter15TableViewCell.swift in Sources */,
+				F38A4A67246E671700693EE7 /* Chapter15Utils.swift in Sources */,
 				F35BC108243242FC009788D6 /* AppDelegate.swift in Sources */,
 				F3031B2D2446272600BDE8AF /* Chapter10EOCategory.swift in Sources */,
 				F3C735BD245AE6FC0017C72A /* Label.swift in Sources */,
@@ -799,6 +818,7 @@
 				F3533FCF243A915F00D0ABA3 /* PHPhotoLibrary.swift in Sources */,
 				F3CD7296245253840014CFE6 /* Chapter10EventsViewController.swift in Sources */,
 				F37FB8AB243D340A00B60856 /* Chapter9TableViewController.swift in Sources */,
+				F38A4A60246E651B00693EE7 /* Chapter15TableViewController.swift in Sources */,
 				F3031B372446314000BDE8AF /* Chapter10EONET.swift in Sources */,
 				F30CECE0243BDFC300750820 /* Chapter8TableViewController.swift in Sources */,
 				F35BC10A243242FC009788D6 /* SceneDelegate.swift in Sources */,
