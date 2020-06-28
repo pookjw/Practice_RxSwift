@@ -1,4 +1,3 @@
-//
 //  Practice.swift
 //  Practice_RxSwift2
 //
@@ -527,5 +526,307 @@ let Practice: [(name: String, foo: () -> ())] = [
         subj6.onNext("Madrid")
         subj5.onNext(.sunny)
         disp6.dispose()
+        
+        print("--- withLatestFrom ---")
+        let subj7 = PublishSubject<Void>()
+        let subj8 = PublishSubject<String>()
+        let obs14 = subj7.withLatestFrom(subj8)
+        let disp7 = obs14.subscribe { print($0) }
+        subj7.onNext(())
+        subj8.onNext("A")
+        subj8.onNext("B")
+        subj8.onNext("C")
+        subj8.onNext("D")
+        subj8.onNext("E")
+        subj7.onNext(())
+        subj7.onNext(())
+        subj7.onNext(())
+        subj8.onNext("F")
+        disp7.dispose()
+        
+        print("--- sample ---")
+        let obs15 = subj8.sample(subj7)
+        let disp8 = obs15.subscribe { print($0) }
+        subj7.onNext(())
+        subj8.onNext("A")
+        subj8.onNext("B")
+        subj8.onNext("C")
+        subj8.onNext("D")
+        subj8.onNext("E")
+        subj7.onNext(())
+        subj7.onNext(())
+        subj7.onNext(())
+        subj8.onNext("F")
+        subj7.onNext(())
+        disp8.dispose()
+        
+        print("--- amb ---")
+        let subj9 = PublishSubject<String>()
+        let subj10 = PublishSubject<String>()
+        let obs16 = subj9.amb(subj10)
+        let disp9 = obs16.subscribe { print($0) }
+        // Emit only the first of these Observables, in this case, the first one is subj9.
+        subj9.onNext("A")
+        subj9.onNext("B")
+        subj10.onNext("C")
+        subj9.onCompleted()
+        subj10.onNext("D")
+        disp9.dispose()
+        
+        print("--- switchLatest ---")
+        let subj11 = PublishSubject<String>()
+        let subj12 = PublishSubject<String>()
+        let subj13 = PublishSubject<String>()
+        let source1 = PublishSubject<Observable<String>>()
+        let obs17 = source1.switchLatest()
+        let disp10 = obs17.subscribe { print($0) }
+        
+        source1.onNext(subj11)
+        subj11.onNext("A")
+        subj11.onNext("B")
+        subj12.onNext("C")
+        
+        source1.onNext(subj12)
+        subj11.onNext("D")
+        subj12.onNext("E")
+        
+        source1.onNext(subj13)
+        subj13.onNext("F")
+        subj11.onNext("G")
+        subj12.onNext("H")
+        
+        disp10.dispose()
+        
+        print("--- reduce (1) ---")
+        let source2 = Observable.of(1, 3, 5, 7, 9)
+        let obs18 = source2.reduce(6, accumulator: +)
+        let disp11 = obs18.subscribe { print($0) }
+        disp11.dispose()
+        
+        print("--- reduce (2) ---")
+        let obs19 = source2.reduce(6, accumulator: { $0 + $1 })
+        let disp12 = obs19.subscribe { print($0) }
+        disp12.dispose()
+    }),
+    
+    ("Chapter 11 - replay & connect", {
+        let obs1 = Observable<Int>.create { observer in
+            var value = 1
+            let timer = DispatchSource.timer(interval: 1.0, queue: .main) {
+                print(value)
+                value += 1
+            }
+            
+            return Disposables.create { timer.suspend() }
+        }.replay(3) // ... or replayAll()
+        
+        let testObsType1 = TestObservableType<Int>(name: "rc")
+        obs1.subscribe(testObsType1).disposed(by: disposeBag)
+        obs1.connect() // If you try to dispose this Disposable, your app gonna crash!
+        // To connect, .replay is required! To see what replay and replayAll they are, see Practice_Swift. There are UI that is visualized how they work.
+    }),
+    
+    ("Chapter 11 - buffer (1)", {
+        let subj1 = PublishSubject<String>()
+        let testObsType2 = TestObservableType<String>(name: "2")
+        subj1.subscribe(testObsType2).disposed(by: disposeBag)
+        let testObsType3 = TestObservableType<Int>(name: "3")
+        subj1
+            .buffer(timeSpan: RxTimeInterval.milliseconds(4000), count: 2, scheduler: MainScheduler.instance)
+            .map { $0.count } // $0 is Array<String>
+            .subscribe(testObsType3)
+            .disposed(by: disposeBag)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            subj1.onNext("🐱")
+            subj1.onNext("🐱")
+            subj1.onNext("🐱")
+            subj1.onNext("🐱")
+            subj1.onNext("🐱")
+        }
+    }),
+    
+    ("Chapter 11 - buffer (2)", {
+        let subj2 = PublishSubject<String>()
+        let testObsType4 = TestObservableType<String>(name: "4")
+        subj2.subscribe(testObsType4).disposed(by: disposeBag)
+        let testObsType5 = TestObservableType<Int>(name: "5")
+        subj2
+            .buffer(timeSpan: RxTimeInterval.milliseconds(4000), count: 2, scheduler: MainScheduler.instance)
+            .map { $0.count } // $0 is Array<String>
+            .subscribe(testObsType5)
+            .disposed(by: disposeBag)
+        
+        Observable<Void>.create { _ in
+            let elementPerSecond = 0.7
+            let timer = DispatchSource.timer(interval: 1.0 / 0.7, queue: .main) {
+                subj2.onNext("🐱")
+            }
+            return Disposables.create {
+                timer.cancel()
+            }
+        }
+            .subscribe()//.disposed(by: disposeBag)
+    }),
+    
+    ("Chapter 11 - window", {
+        let elementsPerSecond = 3
+        let windowTimeSpan: RxTimeInterval = RxTimeInterval.milliseconds(4000)
+        let windowMaxCount = 10
+        let mainSubj = PublishSubject<String>()
+        
+        Observable<Void>.create { _ in
+            let timer = DispatchSource.timer(interval: 1.0/Double(elementsPerSecond), queue: .main) {
+                mainSubj.onNext("🐱")
+            }
+            return Disposables.create {
+                timer.cancel()
+            }
+        }
+        .subscribe()
+        .disposed(by: disposeBag)
+        
+        mainSubj.subscribe(onNext: { print("main: \($0)") }).disposed(by: disposeBag)
+        
+        mainSubj
+            .window(timeSpan: windowTimeSpan, count: windowMaxCount, scheduler: MainScheduler.instance)
+            .flatMap { windowedObservable -> Observable<(PublishSubject<String>, String?)> in
+                let subj = PublishSubject<String>()
+                return windowedObservable
+                    .map { (subj, $0) }
+                    .concat(Observable.just((subj, nil)))
+        }
+        .subscribe(onNext: { tuple in
+            let (subj, value) = tuple
+            if let value = value {
+                print("window: \(value)")
+            } else {
+                print("completed, new subj will be started...")
+            }
+        })
+            .disposed(by: disposeBag)
+    }),
+    
+    ("Chapter 11 - delaySubscription", {
+        let elementsPerSecond = 1
+        let delayInSeconds: RxTimeInterval = RxTimeInterval.milliseconds(1500)
+        var currrent = 1
+        let subj = PublishSubject<String>()
+        
+        Observable<Void>.create { _ in
+            let timer = DispatchSource.timer(interval: 1.0/Double(elementsPerSecond), queue: .main) {
+                subj.onNext("\(currrent)")
+                currrent += 1
+            }
+            return Disposables.create {
+                timer.cancel()
+            }
+        }
+        .subscribe()
+        .disposed(by: disposeBag)
+        
+        subj.subscribe { print("main: \($0)") }.disposed(by: disposeBag)
+        subj
+            .do(onSubscribe: { print("delay was done!!!") })
+            .delaySubscription(delayInSeconds, scheduler: MainScheduler.instance)
+            .subscribe { print("sub: \($0)") }.disposed(by: disposeBag)
+    }),
+    
+    ("Chapter 11 - delay", {
+        let elementsPerSecond = 1
+        let delayInSeconds: RxTimeInterval = RxTimeInterval.milliseconds(1500)
+        var current = 1
+        let subj = PublishSubject<String>()
+        
+        Observable<Void>.create { _ in
+            let timer = DispatchSource.timer(interval: 1.0/Double(elementsPerSecond), queue: .main) {
+                subj.onNext("\(current)")
+                current += 1
+            }
+            return Disposables.create {
+                timer.cancel()
+            }
+        }
+        .subscribe()
+        .disposed(by: disposeBag)
+        
+        subj.subscribe { print("main: \($0)") }.disposed(by: disposeBag)
+        subj
+            .do(onSubscribe: { print("delay was done!!!") })
+            .delay(delayInSeconds, scheduler: MainScheduler.instance)
+            .subscribe { print("sub: \($0)") }.disposed(by: disposeBag)
+    }),
+    
+    ("Chapter 11 - interval", {
+        let elementsPerSecond = 1
+        var current = 1
+        let subj = PublishSubject<String>()
+        
+        let obs = Observable<Int>
+            .interval(RxTimeInterval.microseconds(1000/elementsPerSecond*1000), scheduler: MainScheduler.instance)
+        
+        obs.subscribe { print("1: \($0)") }.disposed(by: disposeBag)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
+            obs.subscribe { print("2: \($0)") }.disposed(by: disposeBag)
+        }
+    }),
+    
+    ("Chapter 11 - timer, timeout", {
+        print("--- deprecated ---")
+    }),
+    
+    ("Chapter 15 - Intro to Schedulers", {
+        print("--- Intro ---")
+        BehaviorSubject(value: "Test")
+            .subscribeOn(MainScheduler.instance)
+            .dump()
+            .observeOn(globalScheduler)
+            .dumpingSubscription()
+            .disposed(by: disposeBag)
+        
+        print("--- Switching schedulers ---")
+        Observable.of("A", "B", "C")
+            .dump()
+            .dumpingSubscription()
+            .disposed(by: disposeBag)
+    }),
+    
+    ("Chapter 15 - subscribeOn", {
+        Observable.of("A", "B", "C")
+            .subscribeOn(globalScheduler)
+            .dump()
+            .dumpingSubscription()
+            .disposed(by: disposeBag)
+    }),
+    
+    ("Chapter 15 - observeOn", {
+        Observable.of("A", "B", "C")
+            .dump()
+            .observeOn(MainScheduler.instance)
+            .subscribeOn(globalScheduler)
+            .dumpingSubscription()
+            .disposed(by: disposeBag)
+    }),
+    
+    ("Chapter 15 - Understanding MainScheduler", {
+        let subj = PublishSubject<String>()
+        subj
+            .dump()
+            .subscribeOn(globalScheduler)
+            .observeOn(MainScheduler.instance)
+            .dumpingSubscription()
+            .disposed(by: disposeBag)
+        
+        let testThread = Thread() {
+            sleep(1)
+            subj.onNext("A")
+            sleep(1)
+            subj.onNext("B")
+            sleep(1)
+            subj.onNext("C")
+        }
+        testThread.name = "Test Thread"
+        testThread.start()
     })
 ]

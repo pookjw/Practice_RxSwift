@@ -112,7 +112,7 @@ class Chapter11TableViewController: UITableViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + replayDelay) {
             _ = sourceObservable.subscribe(replayedTimeline)
         }
-        
+
         _ = sourceObservable.connect()
         // To see what the .connect() it is, remove sourceTimeline and replayedTimeline and comment .connect() code.
         
